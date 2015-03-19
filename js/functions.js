@@ -467,20 +467,26 @@ function scrollPageToTop(){
 		}, 600 );
 	}
 
-	// refreshing the page...
-	var pageScroll = scrollY();
-	noscroll = pageScroll === 0;
+	if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
-	disable_scroll();
+		// refreshing the page...
+		var pageScroll = scrollY();
+		noscroll = pageScroll === 0;
 
-	if( pageScroll ) {
-		isRevealed = true;
+		disable_scroll();
+
+		if( pageScroll ) {
+			isRevealed = true;
+			jQuery('body').addClass( 'notrans' );
+			jQuery('body').addClass( 'modify' );
+		}
+
+		if ( jQuery('body').hasClass('single-post') ) {
+			window.addEventListener( 'scroll', scrollPage );
+		}
+	} else if ( jQuery('body').hasClass('single-post') && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		jQuery('body').addClass( 'notrans' );
 		jQuery('body').addClass( 'modify' );
-	}
-
-	if ( jQuery('body').hasClass('single-post') ) {
-		window.addEventListener( 'scroll', scrollPage );
 	}
 	
 })();

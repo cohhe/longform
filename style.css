@@ -4,7 +4,7 @@ Theme URI: http://cohhe.com/project-view/longform/
 Author: Cohhe
 Author URI: http://cohhe.com/
 Description: Longform is a powerful, feature-rich theme that lets you customize a wide variety of features from the comfort of your Dashboard.
-Version: 1.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
@@ -36,6 +36,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
 }
 
 article,
@@ -86,7 +91,6 @@ body {
 	font-size: 18px;
 	line-height: 1.7em;
 	color: #555555;
-	overflow: hidden;
 }
 
 a {
@@ -1525,7 +1529,7 @@ p.site-description {
 	display: block;
 	font-size: 15px;
 	font-weight: 500;
-	padding: 0 20px;
+	padding: 0 17px;
 	border: 0;
 	text-decoration: none;
 	text-transform: uppercase;	
@@ -2768,7 +2772,7 @@ body.author .with_bg_image .archive-header .author-info-container {
 
 .featured-slider .featured-content article img {
 	max-width: 100%;
-	height: auto;
+	height: 100%;
 	display: block;
 	opacity: 0.5;
 	-webkit-backface-visibility: hidden;
@@ -3073,7 +3077,6 @@ body.archive .site-content > article:nth-of-type(1) {
 .site-content article.type-post,
 .site-content article.type-page {
 	width: 100%;
-	float: left;
 	display: block;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -3096,11 +3099,15 @@ body.archive .site-content > article:nth-of-type(1) {
 	width: 100%;
 	max-width: 100%;
 	position: relative;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	display: block;
 	margin-right: 1px;
 	margin-left: 1px;
 	margin-bottom: 3px;
+}
+
+.site-content article.format-video embed {
+	max-width: 100%;
 }
 
 .single .site-content article {
@@ -3109,7 +3116,7 @@ body.archive .site-content > article:nth-of-type(1) {
 
 .site-content article .post-thumbnail img {
 	max-width: 100%;
-	height: auto;
+	height: 100%;
 	margin-bottom: 40px;
 }
 
@@ -3967,7 +3974,7 @@ article .entry-content table tr:nth-child(even) {
 /* Footer */
 
 .site-footer-container.container {
-	width: 1200px;
+	width: 100%;
 	margin-bottom: 40px;
 }
 
@@ -4743,6 +4750,12 @@ div.wpcf7-mail-sent-ok {
 /* Tablet */
 
 @media (max-width: 991px) {
+	.featured-slider .featured-content .slider-content p {
+		font-size: 56%;
+		line-height: 1.4em;
+		padding-top: 0;
+	}
+
 	.reading-header-right-side .menu-toggle {
 		display: none;
 	}
@@ -4789,5 +4802,9 @@ div.wpcf7-mail-sent-ok {
 	}
 }
 
+@media (min-width: 1199px) {
 
-
+	.site-footer-container.container {
+		width: 1200px;
+	}
+}
