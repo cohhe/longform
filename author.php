@@ -11,7 +11,7 @@
 
 get_header();
 
-global $site_width;
+global $longform_site_width;
 
 $sm_author_id          = get_the_author_meta( 'ID' );
 $sm_authot_description = get_the_author_meta( 'description', $sm_author_id );
@@ -46,7 +46,7 @@ if ( function_exists('get_cimyFieldValue') ) {
 	<?php
 		get_sidebar();
 	?>
-	<section id="primary" class="content-area <?php echo $site_width; ?>">
+	<section id="primary" class="content-area <?php echo $longform_site_width; ?>">
 		<div id="content" class="site-content" role="main">
 
 			<?php if ( have_posts() ) : ?>

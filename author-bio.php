@@ -10,7 +10,7 @@
 
 <div class="author-info">
 	<div class="author-avatar">
-		<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentythirteen_author_bio_avatar_size', 74 ) ); ?>
+		<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'longform_author_bio_avatar_size', 74 ) ); ?>
 	</div><!-- .author-avatar -->
 	<div class="author-description">
 		<p class="author-the-author"><?php _e( 'The author', 'longform' ); ?></p>

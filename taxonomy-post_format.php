@@ -18,10 +18,10 @@
 
 get_header();
 
-global $site_width;
+global $longform_site_width;
 ?>
 
-	<section id="primary" class="content-area <?php echo $site_width; ?>">
+	<section id="primary" class="content-area <?php echo $longform_site_width; ?>">
 		<div id="content" class="site-content" role="main">
 
 			<?php if ( have_posts() ) : ?>

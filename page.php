@@ -13,11 +13,11 @@
 
 get_header();
 
-global $site_width;
+global $longform_site_width;
 ?>
 
 <div id="main-content" class="main-content row">
-	<div id="primary" class="content-area <?php echo $site_width; ?>">
+	<div id="primary" class="content-area <?php echo $longform_site_width; ?>">
 		<div id="content" class="site-content" role="main">
 
 			<?php

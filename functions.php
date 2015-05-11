@@ -272,6 +272,18 @@ function longform_font_url() {
 }
 
 /**
+ * Changes OptionsTree database ID for Longform.
+ *
+ * @since Longform 1.0
+ *
+ * @return string
+ */
+function longform_filter_options_id() {
+  return 'longform_option_tree';
+}
+add_filter( 'ot_options_id', 'longform_filter_options_id' );
+
+/**
  * Enqueue scripts and styles for the front end.
  *
  * @since Longform 1.0
@@ -283,7 +295,7 @@ function longform_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array() );
 
 	// Add Google fonts
-	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700|PT+Serif:400|Merriweather:400,700|Open+Sans:700,400&subset=latin');
+	wp_register_style('googleFonts', '//fonts.googleapis.com/css?family=Old+Standard+TT:400,700|PT+Serif:400|Merriweather:400,700|Open+Sans:700,400&subset=latin');
 	wp_enqueue_style( 'googleFonts');
 
 	// Add Genericons font, used in the main stylesheet.
@@ -574,7 +586,7 @@ if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow
  * @see    http://wordpress.stackexchange.com/q/14037/
  * @author toscho, http://toscho.de
  */
-class Header_Menu_Walker extends Walker_Nav_Menu {
+class Longform_Header_Menu_Walker extends Walker_Nav_Menu {
 
 	/**
 	 * Start the element output.
@@ -668,13 +680,13 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
 }
 
 // Aesop chapter navigation
-add_filter('aesop_chapter_scroll_nav', 'change_aesop_chapter_class');
-function change_aesop_chapter_class() {
+add_filter('aesop_chapter_scroll_nav', 'longform_change_aesop_chapter_class');
+function longform_change_aesop_chapter_class() {
 	return '.header_chapter_open';
 }
 
-add_filter("aesop_chapter_scroll_offset", "theme_aesop_chapter_offset");
-function theme_aesop_chapter_offset() {
+add_filter("aesop_chapter_scroll_offset", "longform_theme_aesop_chapter_offset");
+function longform_theme_aesop_chapter_offset() {
 	return 50;
 }
 

@@ -9,10 +9,10 @@
  * @since Longform 1.0
  */
 
-global $article_width;
+global $longform_article_width;
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class($article_width); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class($longform_article_width); ?>>
 	<header class="entry-header">
 		<?php
 

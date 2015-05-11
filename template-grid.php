@@ -12,10 +12,10 @@
 
 get_header();
 
-global $site_width, $featured_post_class, $featured_post_thumbnail;
+global $longform_site_width, $longform_featured_post_class, $longform_featured_post_thumbnail;
 
-$featured_post_class     = 'col-sm-4 col-md-4 col-lg-4';
-$featured_post_thumbnail = 'longform-thumbnail-large';
+$longform_featured_post_class     = 'col-sm-4 col-md-4 col-lg-4';
+$longform_featured_post_thumbnail = 'longform-thumbnail-large';
 $grid_tag                = '';
 $grid_stories_count      = '';
 $grid_tag                = ot_get_option('grid-tag');
@@ -79,6 +79,6 @@ $grid_posts = get_posts( $args );
 	</div><!-- #featured-content .featured-content -->
 </div><!-- .featured-slider -->
 <?php
-$featured_post_class = '';
+$longform_featured_post_class = '';
 
 get_footer();

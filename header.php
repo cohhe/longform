@@ -32,19 +32,19 @@
 
 		if (!empty($favicon)) {
 			$favicon = ot_get_option('favicon');
-			echo '<link rel="shortcut icon" href="' . $favicon . '" />';
+			echo '<link rel="shortcut icon" href="' . esc_url( $favicon ) . '" />';
 		}
 	?>
 	
 	<?php wp_head(); ?>
 </head>
 <?php
-global $site_width;
+global $longform_site_width;
 
 $form_class    = '';
 $class         = '';
 $search_string = '';
-$site_width    = 'col-sm-12 col-md-12 col-lg-12';
+$longform_site_width    = 'col-sm-12 col-md-12 col-lg-12';
 $layout_type   = get_post_meta(get_the_id(), 'layouts', true);
 
 if ( is_archive() || is_search() || is_404() ) {
@@ -67,7 +67,7 @@ switch ($layout_type) {
 }
 
 if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) ) || ( LONGFORM_LAYOUT == 'sidebar-right' && is_active_sidebar( 'sidebar-2' ) ) )  && is_single() ) {
-	$site_width = 'col-sm-8 col-md-8 col-lg-8';
+	$longform_site_width = 'col-sm-8 col-md-8 col-lg-8';
 }
 ?>
 <body <?php body_class(); ?>>
@@ -122,7 +122,7 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 									'theme_location' => 'primary',
 									'menu_class'     => 'nav-menu',
 									'depth'          => 3,
-									'walker'         => new Header_Menu_Walker
+									'walker'         => new Longform_Header_Menu_Walker
 								)
 							);
 						?>
@@ -166,7 +166,7 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 									'theme_location' => 'primary',
 									'menu_class'     => 'nav-menu',
 									'depth'          => 3,
-									'walker'         => new Header_Menu_Walker
+									'walker'         => new Longform_Header_Menu_Walker
 								)
 							);
 						?>
