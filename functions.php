@@ -648,6 +648,23 @@ class Longform_Header_Menu_Walker extends Walker_Nav_Menu {
 			$item->ID = '';
 		}
 
+		if ( !isset($args->link_before) ) {
+			$args = new stdClass();
+			$args->link_before = '';
+		}
+
+		if ( !isset($args->before) ) {
+			$args->before = '';
+		}
+
+		if ( !isset($args->link_after) ) {
+			$args->link_after = '';
+		}
+
+		if ( !isset($args->after) ) {
+			$args->after = '';
+		}
+
 		! empty( $item->attr_title )
 			and $attributes .= ' title="'  . esc_attr( $item->attr_title ) .'"';
 		! empty( $item->target )
