@@ -22,8 +22,8 @@ Genericons icon font, Copyright 2013 Automattic
 Genericons are licensed under the terms of the GNU GPL, Version 2.
 Source: http://www.genericons.com
 
-GLYPHICONS FREE, Copyright 2010 - 2015 Jan Kovařík
-GLYPHICONS FREE is licensed under the Creative Commons Attribution 3.0 Unported (CC BY 3.0)
+GLYPHICONS, Copyright 2010 - 2015 Jan Kovařík
+GLYPHICONS is licensed under the GPLv3.0
 Source: http://glyphicons.com
 
 Theme Options UI Builder, Copyright 2014 Derek Herman
@@ -33,3 +33,7 @@ Source: https://wordpress.org/plugins/option-tree
 Bootstrap, Copyright 2015 Twitter
 Bootstrap is released under the MIT license
 Source: http://getbootstrap.com
+
+HTML5 Shiv, Copyright 2014 Alexander Farkas (aFarkas)
+HTML5 Shiv is licensed under GPL version 2
+Source: https://github.com/aFarkas/html5shiv
