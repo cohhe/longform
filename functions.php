@@ -284,6 +284,18 @@ function longform_filter_options_id() {
 add_filter( 'ot_options_id', 'longform_filter_options_id' );
 
 /**
+ * Changes OptionsTree setting database ID for Longform.
+ *
+ * @since Longform 1.0
+ *
+ * @return string
+ */
+function longform_filter_options_setting_id() {
+  return 'longform_option_tree_settings';
+}
+add_filter( 'ot_settings_id', 'longform_filter_options_setting_id' );
+
+/**
  * Enqueue scripts and styles for the front end.
  *
  * @since Longform 1.0

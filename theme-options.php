@@ -11,7 +11,7 @@ function longform_theme_options() {
   /**
    * Get a copy of the saved settings array. 
    */
-  $saved_settings = get_option( 'option_tree_settings', array() );
+  $saved_settings = get_option( 'longform_option_tree_settings', array() );
   
   /**
    * Custom settings array that will eventually be 
@@ -157,7 +157,7 @@ function longform_theme_options() {
   
   /* settings are not the same update the DB */
   if ( $saved_settings !== $longform_settings ) {
-	update_option( 'option_tree_settings', $longform_settings ); 
+	update_option( 'longform_option_tree_settings', $longform_settings ); 
   }
   
 }

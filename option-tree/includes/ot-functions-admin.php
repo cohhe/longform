@@ -380,16 +380,16 @@ if ( ! function_exists( 'ot_register_settings_page' ) ) {
     
     }
     
-    $ot_register_pages_array = apply_filters( 'ot_register_pages_array', $ot_register_pages_array );
+    // $ot_register_pages_array = apply_filters( 'ot_register_pages_array', $ot_register_pages_array );
     
-    // Register the pages.
-    ot_register_settings( array(
-        array(
-          'id'              => ot_settings_id(),
-          'pages'           => $ot_register_pages_array
-        )
-      )
-    );
+    // // Register the pages.
+    // ot_register_settings( array(
+    //     array(
+    //       'id'              => ot_settings_id(),
+    //       'pages'           => $ot_register_pages_array
+    //     )
+    //   )
+    // );
   
   }
 
