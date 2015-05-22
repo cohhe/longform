@@ -21,7 +21,7 @@
 			<div class="site-info col-sm-12 col-md-12 col-lg-12">
 				<div class="site-info-content">
 					<div class="copyright">
-						<?php echo ot_get_option('copyright_text'); ?> 
+						<?php ( function_exists('ot_get_option') ? $copyright_text = ot_get_option('copyright_text') : $copyright_text = '' ); echo $copyright_text; ?> 
 						<?php _e( 'Created by', 'longform' ); ?> <a href="http://cohhe.com/" target="_blank">Cohhe</a>. 
 						<?php _e( 'Proudly powered by', 'longform' ); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'longform' ) ); ?>" target="_blank"><?php _e( 'WordPress', 'longform' ); ?></a>
 					</div>
@@ -37,8 +37,8 @@
 						?>
 					</div>
 				</div>
-				<?php 
-				$show_scroll_to_top = ot_get_option('show__scroll_to_top__button');
+				<?php
+				( function_exists('ot_get_option') ? $show_scroll_to_top = ot_get_option('show__scroll_to_top__button') : $show_scroll_to_top = array() );
 
 				if ( !isset( $show_scroll_to_top[0] ) ) {
 					$show_scroll_to_top[0] = 'false';

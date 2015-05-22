@@ -28,10 +28,9 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php
-		$favicon = ot_get_option('favicon');
+		( function_exists('ot_get_option') ? $favicon = ot_get_option('favicon') : $favicon = array() );
 
 		if (!empty($favicon)) {
-			$favicon = ot_get_option('favicon');
 			echo '<link rel="shortcut icon" href="' . esc_url( $favicon ) . '" />';
 		}
 	?>
@@ -51,7 +50,11 @@ if ( is_archive() || is_search() || is_404() ) {
 	$layout_type = 'full';
 
 } elseif (empty($layout_type)) {
-	$layout_type = ot_get_option('longform_layout_style') ? ot_get_option('longform_layout_style') : 'full';
+	if ( function_exists( 'ot_get_option' ) ) {
+		$layout_type = ot_get_option('longform_layout_style') ? ot_get_option('longform_layout_style') : 'full';
+	} else {
+		$layout_type = 'full';
+	}
 }
 
 switch ($layout_type) {
@@ -74,7 +77,7 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 <?php do_action('ase_theme_body_inside_top'); ?>
 <div id="page" class="hfeed site">
 	<?php
-		$logo = ot_get_option('website_logo');
+		( function_exists('ot_get_option') ? $logo = ot_get_option('website_logo') : $logo = array() );
 	?>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="search-toggle">
