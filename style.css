@@ -4,7 +4,7 @@ Theme URI: http://cohhe.com/project-view/longform/
 Author: Cohhe
 Author URI: http://cohhe.com/
 Description: Longform is a powerful, feature-rich theme that lets you customize a wide variety of features from the comfort of your Dashboard.
-Version: 1.0.8
+Version: 1.0.9
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
@@ -2098,6 +2098,130 @@ p.site-description {
 	display: block;
 	min-width: 100%;
 	min-height: 100%;
+}
+
+/* Aesop collections */
+
+.aesop-collection-item-link {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	background: #000;
+}
+
+.aesop-collection-item-img {
+	height: 400px;
+	background-position: center;
+	opacity: 0.5;
+
+	webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.35s;
+	transition: all 0.35s;
+}
+
+.aesop-collection-item:hover .aesop-collection-item-img {
+	-webkit-transform: scale3d(1.05,1.05,1);
+	transform: scale3d(1.05,1.05,1);
+	opacity: 0.7;
+}
+
+.aesop-collection-item {
+	float: left;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.aesop-collection-item-inner {
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	max-width: 80%;
+	z-index: 25;
+
+	-webkit-transform-style: preserve-3d;
+   -webkit-perspective: 1000px;
+}
+
+.aesop-collection-grid-4col .aesop-collection-item-inner {
+	top: 20%;
+}
+
+.aesop-collection-grid-5col .aesop-collection-item-inner {
+	top: 15%;
+}
+
+.aesop-collection-item-inner .aesop-collection-entry-title {
+	font-weight: 700;
+	font-size: 2.55em;
+	font-size: 2.4vw;
+	line-height: 1em;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: "Open Sans";
+	display: block;
+
+	opacity: 0;
+	-webkit-transform: translateZ(-100px);
+	-moz-transform: translateZ(-100px);
+	-ms-transform: translateZ(-100px);
+	-o-transform: translateZ(-100px);
+	transform: translateZ(-100px);
+
+	-webkit-transition: opacity 0.3s, -moz-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, -moz-transform 0.3s;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, -webkit-transform 0.3s;
+	-webkit-transition: opacity 0.3s, transform 0.3s;
+	-moz-transition: opacity 0.3s, transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.aesop-collection-item-inner .aesop-collection-entry-title:hover {
+	color: #fff;
+}
+
+.aesop-collection-item:hover .aesop-collection-item-inner .aesop-collection-entry-title,
+.aesop-collection-item:hover .aesop-collection-item-inner .aesop-collection-item-excerpt {
+	opacity: 1;
+	-webkit-transform: translateZ(0px);
+	-moz-transform: translateZ(0px);
+	-ms-transform: translateZ(0px);
+	-o-transform: translateZ(0px);
+	transform: translateZ(0px);
+}
+
+.aesop-collection-item-excerpt {
+	opacity: 0;
+	color: #fff;
+	font-size: 80%;
+	line-height: 1.7em;
+	font-family: "Open Sans";
+
+	-webkit-transform: translateZ(-400px);
+	-moz-transform: translateZ(-400px);
+	-ms-transform: translateZ(-400px);
+	-o-transform: translateZ(-400px);
+	transform: translateZ(-400px);
+
+	-webkit-transition: opacity 0.2s, -moz-transform 0.2s;
+	-moz-transition: opacity 0.2s, -moz-transform 0.2s;
+	transition: opacity 0.2s, -moz-transform 0.2s;
+	-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+	-moz-transition: opacity 0.2s, -webkit-transform 0.2s;
+	transition: opacity 0.2s, -webkit-transform 0.2s;
+	-webkit-transition: opacity 0.2s, transform 0.2s;
+	-moz-transition: opacity 0.2s, transform 0.2s;
+	transition: opacity 0.2s, transform 0.2s;
+
+	-webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.aesop-collection-meta {
+	display: none;
 }
 
 /* Aesop characters */
