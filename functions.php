@@ -869,7 +869,7 @@ function vh_register_required_plugins() {
 		array(
 			'name'     				=> 'OptionTree', // The plugin name
 			'slug'     				=> 'option-tree', // The plugin slug (typically the folder name)
-			'source'   				=> get_stylesheet_directory() . '/functions/tgm-activation/plugins/option-tree.zip', // The plugin source
+			'source'   				=> 'https://wordpress.org/plugins/option-tree/', // The plugin source
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '2.4.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
