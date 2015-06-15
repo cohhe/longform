@@ -48,8 +48,10 @@
 		}
 	?>
 	<div class="entry-content">
+		<div id="entry-content-wrapper">
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'longform' ) ); ?>
+		</div>
 		<?php
-			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'longform' ) );
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'longform' ) . '</span>',
 				'after'       => '</div>',

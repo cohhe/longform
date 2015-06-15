@@ -144,12 +144,22 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 					<div class="hidden-on-menu">
 						<?php
 						// Previous/next post navigation.
-						longform_post_nav();
+						if ( !in_array('aesop-story-front', get_body_class()) ) {
+							longform_post_nav();
+						}
 
-						if ( function_exists('aesop_component_exists') ) {
+						if ( function_exists('longform_aesop_component_exists') ) {
 
 							// Only add if chapter componen has been added to page
-							if ( aesop_component_exists('chapter') == true ) { ?>
+							if ( in_array('aesop-story-front', get_body_class()) ) {
+								$current_ID = get_option('asf_story_id');
+								$highlight_id = get_option('asf_story_id');
+							} else {
+								$current_ID = '';
+								$highlight_id = get_the_ID();
+							}
+
+							if ( longform_aesop_component_exists( $current_ID , 'chapter' ) == true ) { ?>
 								<div class="header_chapter_container">
 									<a href="javascript:void(0);" class="chapters-link" id="trigger-chapters-overlay"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> <?php _e('Chapters', 'longform'); ?></a>
 									<div class="header_chapter_wrapper">
@@ -159,6 +169,31 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 								</div>
 						<?php
 							}
+
+						$story_highlights = get_post_meta( $highlight_id, 'aesop_story_highlights' );
+						if ( !empty($story_highlights) ) { ?>
+							<div class="header_highlight_container">
+								<a href="javascript:void(0);" class="highlight-link" id="trigger-highlight-overlay"><span class="genericon genericon-book" aria-hidden="true"></span> <?php _e('Highlights', 'longform'); ?></a>
+								<div class="header_highlight_wrapper">
+									<button type="button" class="overlay-close"><?php _e('Close', 'longform'); ?></button>
+									<div class="header_highlight_open highlight_overlay">
+										<nav class="scroll-nav" role="navigation">
+											<div class="scroll-nav__wrapper">
+												<ol class="scroll-nav__list">
+												<?php
+													$counter = 100;
+													foreach ($story_highlights as $highlight_value) {
+														echo '<li class="scroll-nav__item">'.$highlight_value.'</li>';
+														$counter++;
+													}
+												?>
+												</ol>
+											</div>
+										</nav>
+									</div>
+								</div>
+							</div>
+						<?php }
 						}
 						?>
 					</div>
@@ -180,7 +215,32 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 		<div class="clearfix"></div>
 	</header><!-- #masthead -->
 	<?php
-		if ( is_single() && has_post_thumbnail() ) { ?>
+		if ( in_array('aesop-story-front', get_body_class()) ) {
+			$story_id = get_option('asf_story_id');
+			?>
+			<div class="intro-effect-bg-img-container container">
+				<div class="intro-effect-bg-img">
+					<?php echo get_the_post_thumbnail($story_id, 'longform-huge-width' ); ?>
+				</div>
+				<?php echo '<h1 class="entry-title">' . get_the_title( $story_id ) . '</h1>'; ?>
+				<div class="entry-meta">
+					<?php
+						longform_posted_on( $story_id );
+
+						if ( in_array( 'category', get_object_taxonomies( get_post_type( $story_id ) ) ) && longform_categorized_blog() ) : ?>
+							<span class="cat-links">/<?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'longform' ), '', $story_id ); ?></span>
+					<?php
+						endif;
+
+						if ( ! post_password_required( $story_id ) && ( comments_open( $story_id ) || get_comments_number( $story_id ) ) ) :
+					?>
+					<span class="comments-link">/<?php comments_popup_link( __( 'No Comments', 'longform' ), __( '1 Comment', 'longform' ), __( '% Comments', 'longform' ) ); ?></span>
+					<?php
+						endif;
+					?>
+				</div><!-- .entry-meta -->
+			</div>
+		<?php } else if ( is_single() && has_post_thumbnail() ) { ?>
 			<div class="intro-effect-bg-img-container container">
 				<div class="intro-effect-bg-img">
 					<?php longform_post_thumbnail(); ?>
@@ -228,7 +288,7 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 			</div>
 		<?php } ?>
 	<?php
-		if ( is_front_page() && longform_has_featured_posts() ) {
+		if ( is_front_page() && longform_has_featured_posts() && !in_array('aesop-story-front', get_body_class()) ) {
 			// Include the featured content template.
 			get_template_part( 'featured-content' );
 		}

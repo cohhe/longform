@@ -33,7 +33,11 @@ global $longform_site_width;
 
 					the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' );
 
-					echo do_shortcode( '[ssba]' );
+					if ( defined('BA_AESOPSOCIAL_ITEM_NAME') && BA_AESOPSOCIAL_ITEM_NAME == 'aesop-social' ) {
+						do_action('ase_addon_social_links');
+					} else {
+						echo do_shortcode( '[ssba]' );
+					}
 
 					if ( get_the_author_meta( 'description' ) ) :
 						get_template_part( 'author-bio' );

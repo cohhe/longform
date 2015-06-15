@@ -436,7 +436,7 @@ function longform_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
-	if ( is_single() ) {
+	if ( is_single() || in_array('aesop-story-front', $classes) ) {
 		$classes[] = 'intro-effect-fadeout';
 	}
 
@@ -776,6 +776,7 @@ if (!function_exists('aesop_quote_shortcode')){
 
 				<!-- Aesop Core | Quote -->
 				<script>
+					// <![CDATA[
 					jQuery(document).ready(function(){
 
 						var moving 		= jQuery('#aesop-quote-component-<?php echo esc_attr( $unique );?> blockquote'),
@@ -827,6 +828,7 @@ if (!function_exists('aesop_quote_shortcode')){
 						<?php } ?>
 
 					});
+					// ]]>
 				</script>
 
 				<?php do_action('aesop_quote_inside_top'); //action ?>
@@ -1082,3 +1084,40 @@ function longform_theme_options() {
   }
   
 }
+
+function longform_aesop_component_exists( $post_id = '', $component = '' ) {
+	if ( $post_id == '' ) {
+		global $post;
+	} else {
+		$post = get_post( $post_id );
+	}
+
+	// bail if has_shortcode isn't present (pre wp 3.6)
+	if ( ! function_exists( 'has_shortcode' ) ) {
+		return;
+	}
+
+	// check the post content for the passed shortcode
+	if ( isset( $post->post_content ) && has_shortcode( $post->post_content, 'aesop_'.$component ) ) {
+
+		return true;
+
+	} else {
+
+		return false;
+	}
+}
+
+function longform_allowed_tags() {
+	global $allowedposttags;
+	$allowedposttags['script'] = array(
+		'type' => true,
+		'src' => true
+	);
+}
+add_action( 'init', 'longform_allowed_tags' );
+
+function longform_change_aesop_social_text() {
+	return 'STORIES ARE MEANT TO BE SHARED...';
+}
+add_filter( 'aesop_social_message', 'longform_change_aesop_social_text' );

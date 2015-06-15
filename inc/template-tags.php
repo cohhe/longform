@@ -103,8 +103,14 @@ if ( ! function_exists( 'longform_posted_on' ) ) :
  *
  * @return void
  */
-function longform_posted_on() {
+function longform_posted_on( $post_id = '' ) {
 	global $post;
+
+	// Check if post id given
+	if ( $post_id != '' ) {
+		$post = get_post( $post_id );
+	}
+
 	if ( is_sticky() && is_home() && ! is_paged() ) {
 		echo '<span class="sticky-featured-post">' . __( 'Sticky', 'longform' ) . '</span>';
 	}

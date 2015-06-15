@@ -51,8 +51,6 @@
 		jQuery('.header-main').toggleClass('header-menu-active');
 	});
 
-	
-
 	// Shrink header on scroll down
 	if($('.site-header').length > 0) {
 		var y = $(window).scrollTop();
@@ -253,7 +251,7 @@ function scrollPageToTop(){
 
 (function() {
 
-	if( jQuery('button.overlay-close').length != 0 ) {
+	if( jQuery('.header_chapter_wrapper').length != 0 ) {
 
 		// Chapter open overlay functionality
 		var triggerBttn = document.getElementById( 'trigger-chapters-overlay' ),
@@ -276,9 +274,36 @@ function scrollPageToTop(){
 		jQuery('a.scroll-nav__link').live('click', function() {
 			toggleOverlay();
 		});
+		// END - Chapter open overlay functionality
+
 	}
 
-	// END - Chapter open overlay functionality
+	if ( jQuery('.header_highlight_wrapper').length != 0 ) {
+
+		// Highlights open overlay functionality
+		var triggerHBttn = document.getElementById( 'trigger-highlight-overlay' ),
+			HOverlay = document.querySelector( 'div.header_highlight_wrapper' ),
+			closeHBttn = HOverlay.querySelector( 'button.overlay-close' );
+
+		function toggleHOverlay() {
+			if( jQuery('div.header_highlight_wrapper').hasClass( 'open' ) ) {
+				jQuery('div.header_highlight_wrapper').removeClass( 'open' );
+				jQuery('div.header_highlight_wrapper').addClass( 'o-close' );
+			} else {
+				jQuery('div.header_highlight_wrapper').removeClass( 'o-close' );
+				jQuery('div.header_highlight_wrapper').addClass( 'open' );
+			}
+		}
+
+		triggerHBttn.addEventListener( 'click', toggleHOverlay );
+		closeHBttn.addEventListener( 'click', toggleHOverlay );
+		
+		jQuery('a.scroll-nav__link').live('click', function() {
+			toggleHOverlay();
+		});
+		// END - Highlughts open overlay functionality
+
+	};
 
 	// Story reading progress
 	jQuery.fn.scrollProgress = function() {
@@ -343,6 +368,9 @@ function scrollPageToTop(){
 
 	if ( jQuery(".single-post .site-content article .entry-content").length ) {
 		jQuery(".single-post .site-content article .entry-content").scrollProgress();
+	}
+	if ( jQuery(".aesop-story-front .site-main article .entry-content").length ) {
+		jQuery(".aesop-story-front .site-main article .entry-content").scrollProgress();
 	}
 	// END - Story reading progress
 
@@ -481,7 +509,7 @@ function scrollPageToTop(){
 			jQuery('body').addClass( 'modify' );
 		}
 
-		if ( jQuery('body').hasClass('single-post') ) {
+		if ( jQuery('body').hasClass('single-post') || jQuery('body').hasClass('aesop-story-front') ) {
 			window.addEventListener( 'scroll', scrollPage );
 		}
 	} else if ( jQuery('body').hasClass('single-post') && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {

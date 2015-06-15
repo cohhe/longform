@@ -48,8 +48,10 @@ get_header();
 						<?php endif; ?>
 					</div><!-- .entry-attachment -->
 
+					<div id="entry-content-wrapper">
+						<?php the_content(); ?>
+					</div>
 					<?php
-						the_content();
 						wp_link_pages( array(
 							'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'longform' ) . '</span>',
 							'after'       => '</div>',

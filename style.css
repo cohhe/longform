@@ -1251,12 +1251,14 @@ p.site-description {
 }
 
 .single-post .site-header.fixed.shrink .main-header-right-side,
+.aesop-story-front .site-header.fixed.shrink .main-header-right-side,
 .menu-header-right-side,
 .reading-header-right-side {
 	display: none;
 }
 
-.single-post .site-header.fixed.shrink .reading-header-right-side {
+.single-post .site-header.fixed.shrink .reading-header-right-side,
+.aesop-story-front .site-header.fixed.shrink .reading-header-right-side {
 	display: inline-block;
 }
 
@@ -1339,7 +1341,11 @@ p.site-description {
 }
 
 .single-post .site-header .header-main .reading-header-right-side .hidden-on-menu nav,
-.single-post .site-header .header-main .reading-header-right-side .header_chapter_container .chapters-link {
+.single-post .site-header .header-main .reading-header-right-side .header_chapter_container .chapters-link,
+.single-post .site-header .header-main .reading-header-right-side .header_highlight_container .highlight-link,
+.aesop-story-front .site-header .header-main .reading-header-right-side .hidden-on-menu nav,
+.aesop-story-front .site-header .header-main .reading-header-right-side .header_chapter_container .chapters-link,
+.aesop-story-front .site-header .header-main .reading-header-right-side .header_highlight_container .highlight-link {
 	-webkit-transform: translateY(0px);
 	-moz-transform:    translateY(0px);
 	-ms-transform:     translateY(0px);
@@ -1354,7 +1360,9 @@ p.site-description {
 }
 
 .single-post .site-header.fixed.shrink .header-main.header-menu-active .reading-header-right-side .hidden-on-menu nav,
-.single-post .site-header.fixed.shrink .header-main.header-menu-active .reading-header-right-side .header_chapter_container .chapters-link {
+.single-post .site-header.fixed.shrink .header-main.header-menu-active .reading-header-right-side .header_chapter_container .chapters-link,
+.aesop-story-front .site-header.fixed.shrink .header-main.header-menu-active .reading-header-right-side .hidden-on-menu nav,
+.aesop-story-front .site-header.fixed.shrink .header-main.header-menu-active .reading-header-right-side .header_chapter_container .chapters-link {
 	-webkit-transform: translateY(-70px);
 	-moz-transform:    translateY(-70px);
 	-ms-transform:     translateY(-70px);
@@ -1367,7 +1375,8 @@ p.site-description {
 	display: none;
 }
 
-.single-post .site-header.fixed.shrink .header-main .reading-header-right-side .site-navigation {
+.single-post .site-header.fixed.shrink .header-main .reading-header-right-side .site-navigation,
+.aesop-story-front .site-header.fixed.shrink .header-main .reading-header-right-side .site-navigation {
 	position: absolute;
 	right: 60px;
 	margin-top: 0;
@@ -1386,7 +1395,8 @@ p.site-description {
 	transition: all 0.4s;
 }
 
-.single-post .site-header.fixed.shrink .header-main.header-menu-active .reading-header-right-side .site-navigation {
+.single-post .site-header.fixed.shrink .header-main.header-menu-active .reading-header-right-side .site-navigation,
+.aesop-story-front .site-header.fixed.shrink .header-main.header-menu-active .reading-header-right-side .site-navigation {
 	-webkit-transform: translateY(0px);
 	-moz-transform:    translateY(0px);
 	-ms-transform:     translateY(0px);
@@ -1394,12 +1404,14 @@ p.site-description {
 	transform:         translateY(0px);
 }
 
-.reading-header-right-side .header_chapter_container .chapters-link {
+.reading-header-right-side .header_chapter_container .chapters-link,
+.reading-header-right-side .header_highlight_container .highlight-link {
 	display: block;
 	text-align: center;
 	line-height: 49px;
 	float: right;
-	margin-right: 20px
+	margin-right: 20px;
+	text-decoration: none;
 }
 
 .reading-header-right-side .header_chapter_container .chapters-link .glyphicon:before {
@@ -1485,6 +1497,7 @@ p.site-description {
 	padding: 0 25px;
 	width: 100%;
 	outline: none;
+	background-color: transparent;
 }
 
 .site-navigation {
@@ -1963,6 +1976,102 @@ p.site-description {
 	}
 }
 
+/* Aesop character carousel */
+
+.aesop-cc-carousel .owl-item .aesop-character-component .aesop-character-float.aesop-character-left .aesop-character-avatar {
+	clear: both;
+	width: 100% !important;
+	padding: 0 50px;
+	border-radius: 50%;
+}
+
+.aesop-cc-carousel .owl-item .aesop-character-component .aesop-character-float.aesop-character-left .aesop-character-title {
+	padding-left: 50px;
+	margin-bottom: 0 !important;
+	font-weight: normal !important;
+}
+
+.aesop-cc-carousel .owl-item .aesop-character-component .aesop-character-float .aesop-character-cap {
+	padding: 10px 50px;
+}
+
+body .aesop-cc-edit {
+	right: -50px;
+}
+
+.aesop-cc-edit:before {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* Lasso */
+
+.site-content article .entry-content ul.lasso-component--controls {
+	padding: 0;
+}
+
+.lasso--tour__modal ul {
+	max-width: none;
+}
+
+/* Gallery pop */
+
+.aesop-gallery-pop {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.aesop-gallery-pop > a {
+	margin-bottom: 0;
+}
+
+/* Aesop social */
+
+.ase-social-links {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.ase-social-links > a {
+	float: right;
+}
+
+.ase-social-links > span {
+	float: left;
+}
+
+.ase-social-links:after {
+	content: '';
+	display: inline-block;
+}
+
+.ase-social-links a {
+	padding: 0 6px;
+}
+
+.ase-social-links a i {
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 23px;
+}
+
+.ase-social-links .aesop-social-twitter-link i {
+	background-color: #2ca9e0;
+}
+
+.ase-social-links .aesop-social-facebook-link i {
+	background-color: #3c5b9b;
+	font-size: 26px;
+}
+
+.ase-social-links .aesop-social-gplus-link i {
+	background-color: #f63e28;
+}
+
 /* Article intro effect */
 
 .intro-effect-fadeout:not(.notrans) .intro-effect-bg-img {
@@ -2067,14 +2176,16 @@ p.site-description {
 }
 
 .intro-effect-fadeout .site-content > article,
-.intro-effect-fadeout .content-sidebar {
+.intro-effect-fadeout .content-sidebar,
+.intro-effect-fadeout .site-main > article {
 	opacity: 0;
 	-webkit-transform: translateY(350px);
 	transform: translateY(350px);
 }
 
 .intro-effect-fadeout.modify .site-content > article,
-.intro-effect-fadeout.modify .content-sidebar {
+.intro-effect-fadeout.modify .content-sidebar,
+.intro-effect-fadeout.modify .site-main > article {
 	opacity: 1;
 	-webkit-transform: translateY(-50px);
 	transform: translateY(-50px);
@@ -2235,14 +2346,14 @@ p.site-description {
 .site-content article .entry-content img.aesop-character-avatar {
 	float: none;
 	display: block;
-	border-radius: 1000px;
+	border-radius: 50%;
 	margin-bottom: 10px;
 }
 
 p.aesop-character-cap {
 	font-size: 0.8rem;
-	width: 60%;
-	text-align: center;
+	width: 100%;
+	text-align: left;
 	line-height: 1.1rem;
 }
 
@@ -2595,15 +2706,18 @@ body.sticky_header_active .story-progress-bar {
 	-moz-transform: translateX(0%);
 }
 
-.header_chapter_container {
+.header_chapter_container,
+.header_highlight_container {
 	text-align: right;
 }
 
-.chapter_overlay {
+.chapter_overlay,
+.highlight_overlay {
 	height: 100%;
 }
 
-.header_chapter_wrapper {
+.header_chapter_wrapper,
+.header_highlight_wrapper {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -2620,7 +2734,18 @@ body.sticky_header_active .story-progress-bar {
 	margin-right: 3px;
 }
 
-.header_chapter_wrapper .overlay-close {
+.header_highlight_container .genericon-book {
+	font-size: 23px;
+	width: 23px;
+	height: 23px;
+	line-height: 23px;
+	vertical-align: middle;
+	top: -2px;
+	position: relative;
+}
+
+.header_chapter_wrapper .overlay-close,
+.header_highlight_wrapper .overlay-close {
 	width: 50px;
 	height: 50px;
 	position: relative;
@@ -2638,7 +2763,8 @@ body.sticky_header_active .story-progress-bar {
 	float: right;
 }
 
-.header_chapter_wrapper nav {
+.header_chapter_wrapper nav,
+.header_highlight_wrapper nav {
 	text-align: center;
 	position: relative;
 	top: 35%;
@@ -2648,7 +2774,8 @@ body.sticky_header_active .story-progress-bar {
 	transform: translateY(-50%);
 }
 
-.header_chapter_wrapper ol {
+.header_chapter_wrapper ol,
+.header_highlight_wrapper ol {
 	list-style: none;
 	padding: 0;
 	margin: 0 auto;
@@ -2662,7 +2789,8 @@ body.sticky_header_active .story-progress-bar {
 	font-family: "Old Standard TT";
 }
 
-.header_chapter_wrapper ol li {
+.header_chapter_wrapper ol li,
+.header_highlight_wrapper ol li {
 	height: 20%;
 	height: calc(100% / 5);
 	min-height: 80px;
@@ -2672,7 +2800,8 @@ body.sticky_header_active .story-progress-bar {
 	display: none;
 }
 
-.header_chapter_wrapper ol li a {
+.header_chapter_wrapper ol li a,
+.header_highlight_wrapper ol li a {
 	font-weight: 300;
 	display: block;
 	color: #fff;
@@ -2691,31 +2820,37 @@ body.sticky_header_active .story-progress-bar {
 }*/
 
 .header_chapter_wrapper ol li a:hover,
-.header_chapter_wrapper ol li a:focus {
+.header_chapter_wrapper ol li a:focus,
+.header_highlight_wrapper ol li a:hover,
+.header_highlight_wrapper ol li a:focus {
 	color: #333;
 }
 
 /* Overlay open/close effect */
-.header_chapter_wrapper {
+.header_chapter_wrapper,
+.header_highlight_wrapper {
 	opacity: 0;
 	visibility: hidden;
 	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
 	transition: opacity 0.5s, visibility 0s 0.5s;
 }
 
-.header_chapter_wrapper.open {
+.header_chapter_wrapper.open,
+.header_highlight_wrapper.open {
 	opacity: 1;
 	visibility: visible;
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 }
 
-.header_chapter_wrapper nav {
+.header_chapter_wrapper nav,
+.header_highlight_wrapper nav {
 	-webkit-perspective: 1200px;
 	perspective: 1200px;
 }
 
-.header_chapter_wrapper nav ol {
+.header_chapter_wrapper nav ol,
+.header_highlight_wrapper nav ol {
 	opacity: 0.4;
 	-webkit-transform: translateY(-25%) rotateX(35deg);
 	transform: translateY(-25%) rotateX(35deg);
@@ -2723,13 +2858,15 @@ body.sticky_header_active .story-progress-bar {
 	transition: transform 0.5s, opacity 0.5s;
 }
 
-.header_chapter_wrapper.open nav ol {
+.header_chapter_wrapper.open nav ol,
+.header_highlight_wrapper.open nav ol {
 	opacity: 1;
 	-webkit-transform: rotateX(0deg);
 	transform: rotateX(0deg);
 }
 
-.header_chapter_wrapper.o-close nav ol {
+.header_chapter_wrapper.o-close nav ol,
+.header_highlight_wrapper.o-close nav ol {
 	-webkit-transform: translateY(25%) rotateX(-35deg);
 	transform: translateY(25%) rotateX(-35deg);
 }
@@ -3118,7 +3255,8 @@ body.author .with_bg_image .archive-header .author-info-container {
 
 /* Blog */
 
-.site-content div.ssba {
+.site-content div.ssba,
+.site-content .ase-social-links {
 	margin-top: 40px !important;
 	margin-bottom: 120px !important;
 	border-top: 1px solid #E8E8E8;
@@ -3325,6 +3463,10 @@ body.archive .site-content > article:nth-of-type(1) {
 	max-width: 100%;
 	height: auto;
 	margin-bottom: 30px;
+}
+
+.site-content article .entry-content .aesop-gallery-pop img {
+	margin-bottom: 0;
 }
 
 .site-content article .entry-content .wp-caption img {
