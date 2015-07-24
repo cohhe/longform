@@ -51,6 +51,10 @@
 		jQuery('.header-main').toggleClass('header-menu-active');
 	});
 
+	jQuery('body').click(function() {
+		jQuery('.site-navigation').collapse("hide");
+	});
+
 	// Shrink header on scroll down
 	if($('.site-header').length > 0) {
 		var y = $(window).scrollTop();
