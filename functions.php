@@ -503,10 +503,10 @@ function longform_the_related_posts() {
 		}
 
 		$args = array(
-			'tag__in'          => $tag_ids,
-			'post__not_in'     => array($post->ID),
-			'posts_per_page'   => 8, // Number of related posts to display.
-			'caller_get_posts' => 1
+			'tag__in'             => $tag_ids,
+			'post__not_in'        => array($post->ID),
+			'posts_per_page'      => 8, // Number of related posts to display.
+			'ignore_sticky_posts' => 1
 		);
 
 		$my_query = new wp_query( $args ); ?>
@@ -1118,6 +1118,6 @@ function longform_allowed_tags() {
 add_action( 'init', 'longform_allowed_tags' );
 
 function longform_change_aesop_social_text() {
-	return 'STORIES ARE MEANT TO BE SHARED...';
+	return __( 'STORIES ARE MEANT TO BE SHARED...', 'longform' );
 }
 add_filter( 'aesop_social_message', 'longform_change_aesop_social_text' );

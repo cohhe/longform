@@ -37,3 +37,14 @@ Source: http://getbootstrap.com
 HTML5 Shiv, Copyright 2014 Alexander Farkas (aFarkas)
 HTML5 Shiv is licensed under GPL version 2
 Source: https://github.com/aFarkas/html5shiv
+
+Used images in screenshot.png, licensed under CC0 Public Domain, free for commercial use / no attribution required
+https://pixabay.com/en/purple-grapes-vineyard-napa-valley-553463/
+https://pixabay.com/en/blue-eyes-woman-female-makeup-237438/
+https://pixabay.com/en/vintage-woman-pretty-glamorous-635244/
+https://pixabay.com/en/giraffe-animal-funny-614141/
+https://pixabay.com/en/sheep-grass-agriculture-farm-animal-336474/
+https://pixabay.com/en/photographer-photography-349874/
+https://pixabay.com/en/puppy-dog-canine-faithful-dog-eyes-336707/
+https://download.unsplash.com/uploads/141223808515744db9995/3361b5e1 (unsplash.com)
+http://www.pexels.com/photo/sea-mountains-nature-water-3245/
