@@ -51,8 +51,244 @@ function longform_customize_register( $wp_customize ) {
 			'slider' => __( 'Slider', 'longform' ),
 		),
 	) );
+
+	// Add General setting panel and configure settings inside it
+	$wp_customize->add_panel( 'longform_general_panel', array(
+		'priority'       => 250,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'General settings' , 'longform'),
+		'description'    => __( 'You can configure your general theme settings here' , 'longform')
+	) );
+
+	// Website logo
+	$wp_customize->add_section( 'longform_general_logo', array(
+		'priority'       => 10,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'Website logo' , 'longform'),
+		'description'    => __( 'Please upload your logo, recommended logo size should be between 262x80' , 'longform'),
+		'panel'          => 'longform_general_panel'
+	) );
+
+	$wp_customize->add_setting( 'longform_logo', array( 'sanitize_callback' => 'esc_url_raw' ) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'longform_logo', array(
+		'label'    => __( 'Website logo', 'longform' ),
+		'section'  => 'longform_general_logo',
+		'settings' => 'longform_logo',
+	) ) );
+
+	// Copyright
+	$wp_customize->add_section( 'longform_general_copyright', array(
+		'priority'       => 20,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'Copyright' , 'longform'),
+		'description'    => __( 'Please provide short copyright text which will be shown in footer.' , 'longform'),
+		'panel'          => 'longform_general_panel'
+	) );
+
+	$wp_customize->add_setting( 'longform_copyright', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+
+	$wp_customize->add_control(
+		'longform_copyright',
+		array(
+			'label'      => 'Copyright',
+			'section'    => 'longform_general_copyright',
+			'type'       => 'text',
+		)
+	);
+
+	// Scroll to top
+	$wp_customize->add_section( 'longform_general_scrolltotop', array(
+		'priority'       => 30,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'Scroll to top' , 'longform'),
+		'description'    => __( 'Do you want to enable "Scroll to Top" button?' , 'longform'),
+		'panel'          => 'longform_general_panel'
+	) );
+
+	$wp_customize->add_setting( 'longform_scrolltotop', array( 'sanitize_callback' => 'longform_sanitize_checkbox' ) );
+
+	$wp_customize->add_control(
+		'longform_scrolltotop',
+		array(
+			'label'      => 'Scroll to top',
+			'section'    => 'longform_general_scrolltotop',
+			'type'       => 'checkbox',
+		)
+	);
+
+	// Favicon
+	$wp_customize->add_section( 'longform_general_favicon', array(
+		'priority'       => 40,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'Favicon' , 'longform'),
+		'description'    => __( 'Do you have favicon? You can upload it here.' , 'longform'),
+		'panel'          => 'longform_general_panel'
+	) );
+
+	$wp_customize->add_setting( 'longform_favicon', array( 'sanitize_callback' => 'esc_url_raw' ) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'longform_favicon', array(
+		'label'    => __( 'Favicon', 'longform' ),
+		'section'  => 'longform_general_favicon',
+		'settings' => 'longform_favicon',
+	) ) );
+
+	// Page layout
+	$wp_customize->add_section( 'longform_general_layout', array(
+		'priority'       => 50,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'Layout' , 'longform'),
+		'description'    => __( 'Choose a layout for your theme pages. Note that a widget has to be inside widget are, or the layout won\'t change.' , 'longform'),
+		'panel'          => 'longform_general_panel'
+	) );
+
+	$wp_customize->add_setting(
+		'longform_layout',
+		array(
+			'default'           => 'full',
+			'sanitize_callback' => 'sanitize_text_field'
+		)
+	);
+
+	$wp_customize->add_control(
+		'longform_layout',
+		array(
+			'type' => 'radio',
+			'label' => 'Layout',
+			'section' => 'longform_general_layout',
+			'choices' => array(
+				'full' => 'Full',
+				'right' => 'Right'
+			)
+		)
+	);
+
+	// Add Stories grid setting panel and configure settings inside it
+	$wp_customize->add_panel( 'longform_stories_panel', array(
+		'priority'       => 260,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'Stories grid' , 'longform'),
+		'description'    => __( 'You can configure your themes stories grid here.' , 'longform')
+	) );
+
+	// Grid tag
+	$wp_customize->add_section( 'longform_stories_tag', array(
+		'priority'       => 10,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'Grid tag' , 'longform'),
+		'description'    => __( 'Please provide tag name of the posts which you want to show in "Stories grid" page.' , 'longform'),
+		'panel'          => 'longform_stories_panel'
+	) );
+
+	$wp_customize->add_setting( 'longform_stories_tag', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+
+	$wp_customize->add_control(
+		'longform_stories_tag',
+		array(
+			'label'      => 'Grid tag',
+			'section'    => 'longform_stories_tag',
+			'type'       => 'text',
+		)
+	);
+
+	// Stories per page
+	$wp_customize->add_section( 'longform_stories_perpage', array(
+		'priority'       => 20,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'Stories per page' , 'longform'),
+		'description'    => __( 'How much stories should be showed per page?' , 'longform'),
+		'panel'          => 'longform_stories_panel'
+	) );
+
+	$wp_customize->add_setting( 'longform_stories_per_page', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+
+	$wp_customize->add_control(
+		'longform_stories_per_page',
+		array(
+			'label'      => 'Stories per page',
+			'section'    => 'longform_stories_perpage',
+			'type'       => 'text',
+		)
+	);
+
+	// Social links
+	$wp_customize->add_section( new longform_Customized_Section( $wp_customize, 'longform_social_links', array(
+		'priority'       => 300,
+		'capability'     => 'edit_theme_options'
+		) )
+	);
+
+	$wp_customize->add_setting( 'longform_fake_field', array( 'sanitize_callback' => 'sanitize_text_field' ) );
+
+	$wp_customize->add_control(
+		'longform_fake_field',
+		array(
+			'label'      => '',
+			'section'    => 'longform_social_links',
+			'type'       => 'text'
+		)
+	);
 }
 add_action( 'customize_register', 'longform_customize_register' );
+
+if ( class_exists( 'WP_Customize_Section' ) && !class_exists( 'longform_Customized_Section' ) ) {
+	class longform_Customized_Section extends WP_Customize_Section {
+		public function render() {
+			$classes = 'accordion-section control-section control-section-' . $this->type;
+			?>
+			<li id="accordion-section-<?php echo esc_attr( $this->id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
+				<style type="text/css">
+					.cohhe-social-profiles {
+						padding: 14px;
+					}
+					.cohhe-social-profiles li:last-child {
+						display: none !important;
+					}
+					.cohhe-social-profiles li i {
+						width: 20px;
+						height: 20px;
+						display: inline-block;
+						background-size: cover !important;
+						margin-right: 5px;
+						float: left;
+					}
+					.cohhe-social-profiles li i.twitter {
+						background: url(<?php echo get_template_directory_uri().'/images/icons/twitter.png'; ?>);
+					}
+					.cohhe-social-profiles li i.facebook {
+						background: url(<?php echo get_template_directory_uri().'/images/icons/facebook.png'; ?>);
+					}
+					.cohhe-social-profiles li i.googleplus {
+						background: url(<?php echo get_template_directory_uri().'/images/icons/googleplus.png'; ?>);
+					}
+					.cohhe-social-profiles li i.cohhe_logo {
+						background: url(<?php echo get_template_directory_uri().'/images/icons/cohhe.png'; ?>);
+					}
+					.cohhe-social-profiles li a {
+						height: 20px;
+						line-height: 20px;
+					}
+					#customize-theme-controls>ul>#accordion-section-longform_social_links {
+						margin-top: 40px;
+					}
+				</style>
+				<ul class="cohhe-social-profiles">
+					<li class="social-twitter"><i class="twitter"></i><a href="https://twitter.com/Cohhe_Themes" target="_blank"><?php _e( 'Follow us on Twitter', 'longform' ); ?></a></li>
+					<li class="social-facebook"><i class="facebook"></i><a href="https://www.facebook.com/cohhethemes" target="_blank"><?php _e( 'Join us on Facebook', 'longform' ); ?></a></li>
+					<li class="social-googleplus"><i class="googleplus"></i><a href="https://plus.google.com/+Cohhe_Themes/posts" target="_blank"><?php _e( 'Join us on Google+', 'longform' ); ?></a></li>
+					<li class="social-cohhe"><i class="cohhe_logo"></i><a href="http://cohhe.com/" target="_blank"><?php _e( 'Cohhe.com', 'longform' ); ?></a></li>
+				</ul>
+			</li>
+			<?php
+		}
+	}
+}
+
+function longform_sanitize_checkbox( $input ) {
+	// Boolean check 
+	return ( ( isset( $input ) && true == $input ) ? true : false );
+}
 
 /**
  * Sanitize the Featured Content layout value.

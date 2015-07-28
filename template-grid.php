@@ -16,10 +16,8 @@ global $longform_site_width, $longform_featured_post_class, $longform_featured_p
 
 $longform_featured_post_class     = 'col-sm-4 col-md-4 col-lg-4';
 $longform_featured_post_thumbnail = 'longform-thumbnail-large';
-$grid_tag                = '';
-$grid_stories_count      = '';
-( function_exists('ot_get_option') ? $grid_tag = ot_get_option('grid-tag') : $grid_tag = '' );
-( function_exists('ot_get_option') ? $grid_stories_count = ot_get_option('grid-stories-count') : $grid_stories_count = '' );
+$grid_tag                         = get_theme_mod('longform_stories_tag', '');
+$grid_stories_count               = get_theme_mod('longform_stories_per_page', '');
 
 // If tag isn't specified then use default one
 if ( empty($grid_tag) ) {

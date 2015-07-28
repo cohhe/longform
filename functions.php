@@ -266,30 +266,6 @@ function longform_font_url() {
 }
 
 /**
- * Changes OptionsTree database ID for Longform.
- *
- * @since Longform 1.0
- *
- * @return string
- */
-function longform_filter_options_id() {
-  return 'longform_option_tree';
-}
-add_filter( 'ot_options_id', 'longform_filter_options_id' );
-
-/**
- * Changes OptionsTree setting database ID for Longform.
- *
- * @since Longform 1.0
- *
- * @return string
- */
-function longform_filter_options_setting_id() {
-  return 'longform_option_tree_settings';
-}
-add_filter( 'ot_settings_id', 'longform_filter_options_setting_id' );
-
-/**
  * Enqueue scripts and styles for the front end.
  *
  * @since Longform 1.0
@@ -868,16 +844,16 @@ function vh_register_required_plugins() {
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
 	$plugins = array(
-		array(
-			'name'     				=> 'OptionTree', // The plugin name
-			'slug'     				=> 'option-tree', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://wordpress.org/plugins/option-tree/', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '2.4.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		)
+		// array(
+		// 	'name'     				=> 'OptionTree', // The plugin name
+		// 	'slug'     				=> 'option-tree', // The plugin slug (typically the folder name)
+		// 	'source'   				=> 'https://wordpress.org/plugins/option-tree/', // The plugin source
+		// 	'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+		// 	'version' 				=> '2.4.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+		// 	'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+		// 	'force_deactivation' 	=> true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+		// 	'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+		// )
 	);
 
 	/**
@@ -931,158 +907,49 @@ add_action( 'admin_init', 'longform_theme_options', 1 );
  * Build the custom settings & update OptionTree.
  */
 function longform_theme_options() {
-  /**
-   * Get a copy of the saved settings array. 
-   */
-  $saved_settings = get_option( 'longform_option_tree_settings', array() );
-  
-  /**
-   * Custom settings array that will eventually be 
-   * passes to the OptionTree Settings API Class.
-   */
-  $longform_settings = array(
-	'sections'        => array(
-	  array(
-		'id'          => 'general',
-		'title'       => 'General'
-	  ),
-	  array(
-		'id'          => 'stories_grid',
-		'title'       => 'Stories grid'
-	  )
-	),
-	'settings'        => array(
-		array(
-			'id'           => 'website_logo',
-			'label'        => __( 'Website logo', 'longform' ),
-			'desc'         => sprintf( __( 'Please upload your logo.', 'longform' ), apply_filters( 'ot_upload_text', __( 'Send to OptionTree', 'longform' ) ), 'FTP' ),
-			'std'          => '',
-			'type'         => 'upload',
-			'section'      => 'general',
-			'rows'         => '',
-			'post_type'    => '',
-			'taxonomy'     => '',
-			'min_max_step' => '',
-			'class'        => '',
-			'condition'    => '',
-			'operator'     => 'and'
-		),
-		array(
-			'id'          => 'copyright_text',
-			'label'       => __( 'Copyright', 'longform' ),
-			'desc'        => __( 'Please provide short copyright text which will be shown in footer.', 'longform' ),
-			'std'         => '',
-			'type'        => 'text',
-			'section'     => 'general',
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
-			'min_max_step'=> '',
-			'class'       => '',
-			'condition'   => '',
-			'operator'    => 'and'
-		),
-		array(
-			'id'           => 'show__scroll_to_top__button',
-			'label'        => __( 'Show "Scroll to Top" button', 'longform' ),
-			'desc'         => __( 'Do you want to show "Scroll to Top" button?', 'longform' ),
-			'std'          => 'false',
-			'type'         => 'checkbox',
-			'section'      => 'general',
-			'rows'         => '',
-			'post_type'    => '',
-			'taxonomy'     => '',
-			'min_max_step' => '',
-			'class'        => '',
-			'condition'    => '',
-			'operator'     => 'and',
-			'choices'      => array( 
-				array(
-					'value' => 'true',
-					'label' => __( 'Show', 'longform' ),
-					'src'   => ''
-				)
-			)
-		),
-		array(
-			'id'           => 'favicon',
-			'label'        => __( 'Favicon', 'longform' ),
-			'desc'         => sprintf( __( 'Do you have favicon?', 'longform' ), apply_filters( 'ot_upload_text', __( 'Send to OptionTree', 'longform' ) ), 'FTP' ),
-			'std'          => '',
-			'type'         => 'upload',
-			'section'      => 'general',
-			'rows'         => '',
-			'post_type'    => '',
-			'taxonomy'     => '',
-			'min_max_step' => '',
-			'class'        => '',
-			'condition'    => '',
-			'operator'     => 'and'
-		),
-		array(
-			'id'          => 'longform_layout_style',
-			'label'       => 'Layout',
-			'desc'        => 'Choose a layout for your theme',
-			'std'         => 'full',
-			'type'        => 'radio-image',
-			'section'     => 'general',
-			'class'       => '',
-			'choices'     => array(
-				// array(
-				// 	'value'   => 'left',
-				// 	'label'   => 'Left Sidebar',
-				// 	'src'     => OT_URL . '/assets/images/layout/left-sidebar.png'
-				// ),
-				array(
-					'value'   => 'full',
-					'label'   => 'Full Width (no sidebar)',
-					'src'     => get_template_directory_uri() . '/images/layout/full-width.png'
-				),
-				array(
-					'value'   => 'right',
-					'label'   => 'Right Sidebar',
-					'src'     => get_template_directory_uri() . '/images/layout/right-sidebar.png'
-				)
-			)
-		),
-		array(
-			'id'          => 'grid-tag',
-			'label'       => __( 'Grid tag', 'longform' ),
-			'desc'        => __( 'Please provide tag name of the posts which you want to show in "Stories grid" page.', 'longform' ),
-			'std'         => '',
-			'type'        => 'text',
-			'section'     => 'stories_grid',
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
-			'min_max_step'=> '',
-			'class'       => '',
-			'condition'   => '',
-			'operator'    => 'and'
-		),
-		array(
-			'id'          => 'grid-stories-count',
-			'label'       => __( 'Stories per page', 'longform' ),
-			'desc'        => __( 'How much stories should be showed per page?', 'longform' ),
-			'std'         => '15',
-			'type'        => 'text',
-			'section'     => 'stories_grid',
-			'rows'        => '',
-			'post_type'   => '',
-			'taxonomy'    => '',
-			'min_max_step'=> '',
-			'class'       => '',
-			'condition'   => '',
-			'operator'    => 'and'
-		)
-	)
-  );
-  
-  /* settings are not the same update the DB */
-  if ( $saved_settings !== $longform_settings ) {
-	update_option( 'longform_option_tree_settings', $longform_settings ); 
-  }
-  
+	/**
+	* Get a copy of Option Tree and Customizer settings if they exist.
+	*/
+	$ot_settings = get_option( 'longform_option_tree', array() );
+	$customizer_settings = get_option( 'theme_mods_longform', array() );
+	$settings_imported = get_option( 'longform_settings_imported', false );
+
+	if ( !empty($ot_settings) && !$settings_imported ) {
+		if ( $ot_settings['website_logo'] != '' ) {
+			$customizer_settings['longform_logo'] = $ot_settings['website_logo'];
+		}
+
+		if ( $ot_settings['copyright_text'] != '' ) {
+			$customizer_settings['longform_copyright'] = $ot_settings['copyright_text'];
+		}
+
+		if ( $ot_settings['show__scroll_to_top__button']['0'] != '' ) {
+			$customizer_settings['longform_scrolltotop'] = (bool)$ot_settings['show__scroll_to_top__button']['0'];
+		}
+
+		if ( $ot_settings['favicon'] != '' ) {
+			$customizer_settings['longform_favicon'] = $ot_settings['favicon'];
+		}
+
+		if ( $ot_settings['longform_layout_style'] != '' ) {
+			$customizer_settings['longform_layout'] = $ot_settings['longform_layout_style'];
+		}
+
+		if ( $ot_settings['grid-tag'] != '' ) {
+			$customizer_settings['longform_stories_tag'] = $ot_settings['grid-tag'];
+		}
+
+		if ( $ot_settings['grid-stories-count'] != '' ) {
+			$customizer_settings['longform_stories_per_page'] = $ot_settings['grid-stories-count'];
+		}
+
+		update_option('longform_settings_imported', true);
+		update_option('theme_mods_longform', $customizer_settings);
+	}
+
+	if ( function_exists('ot_get_option') ) {
+		add_action('admin_notices', 'longform_admin_notice');
+	}
 }
 
 function longform_aesop_component_exists( $post_id = '', $component = '' ) {
@@ -1118,6 +985,13 @@ function longform_allowed_tags() {
 add_action( 'init', 'longform_allowed_tags' );
 
 function longform_change_aesop_social_text() {
-	return 'STORIES ARE MEANT TO BE SHARED...';
+	return __('STORIES ARE MEANT TO BE SHARED...', 'vh');
 }
 add_filter( 'aesop_social_message', 'longform_change_aesop_social_text' );
+
+function longform_admin_notice(){
+	$customizer_url = get_admin_url().'customize.php';
+	echo '<div class="notice updated">
+		<p>We made changes to Theme Options, your theme settings are now at <a href="'.$customizer_url.'">customizer</a> with your saved values and Option Tree is no longer needed.</p>
+	</div>';
+}

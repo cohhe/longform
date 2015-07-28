@@ -52,7 +52,9 @@
 	});
 
 	jQuery('body').click(function() {
-		jQuery('.site-navigation').collapse("hide");
+		if ( jQuery('#primary-navigation').hasClass('in') ) {
+			jQuery('.site-navigation').collapse("hide");
+		};
 	});
 
 	// Shrink header on scroll down
