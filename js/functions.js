@@ -129,7 +129,7 @@
 					} else {
 
 						// Switch back to site title
-						if ( jQuery('body').hasClass('single-post') ) {
+						if ( jQuery('body').hasClass('single-post') && !jQuery('.site-title a img').length ) {
 							jQuery('.single-post .site-title a').text(site_title);
 						}
 

@@ -152,6 +152,7 @@ class Featured_Content {
 	public static function get_featured_post_ids() {
 		// Return array of cached results if they exist.
 		$featured_ids = get_transient( 'featured_content_ids' );
+
 		if ( ! empty( $featured_ids ) ) {
 			return array_map( 'absint', (array) $featured_ids );
 		}
@@ -422,6 +423,11 @@ class Featured_Content {
 			'type'                 => 'option',
 			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
 		) );
+		$wp_customize->add_setting( 'featured-content[quantity]', array(
+			'default'              => '',
+			'type'                 => 'option',
+			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
+		) );
 
 		// Add Featured Content controls.
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
@@ -433,8 +439,14 @@ class Featured_Content {
 			'label'    => __( 'Don&rsquo;t display tag on front end.', 'longform' ),
 			'section'  => 'featured_content',
 			'type'     => 'checkbox',
+			'priority' => 40,
+		) );
+		$wp_customize->add_control( 'featured-content[quantity]', array(
+			'label'    => __( 'Post limit', 'longform' ),
+			'section'  => 'featured_content',
 			'priority' => 30,
 		) );
+
 	}
 
 	/**
@@ -471,10 +483,10 @@ class Featured_Content {
 		$saved = (array) get_option( 'featured-content' );
 
 		$defaults = array(
-			'hide-tag' => 1,
-			'quantity' => 6,
-			'tag-id'   => 0,
-			'tag-name' => 'featured',
+			'hide-tag'   => 1,
+			'quantity'   => 6,
+			'tag-id'     => 0,
+			'tag-name'   => 'featured',
 		);
 
 		$options = wp_parse_args( $saved, $defaults );
@@ -551,7 +563,7 @@ class Featured_Content {
 		if ( $quantity > self::$max_posts ) {
 			$quantity = self::$max_posts;
 		} else if ( 1 > $quantity ) {
-			$quantity = 1;
+			$quantity = 0;
 		}
 
 		return $quantity;
