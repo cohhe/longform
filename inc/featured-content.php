@@ -121,15 +121,27 @@ class Featured_Content {
 	 */
 	public static function get_featured_posts() {
 		$post_ids = self::get_featured_post_ids();
+		$settings = self::get_setting();
 
 		// No need to query if there is are no featured posts.
 		if ( empty( $post_ids ) ) {
 			return array();
 		}
 
+		if ( $settings['order'] == 'rand' ) {
+			$orderby = 'rand';
+			$order = 'desc';
+
+		} else {
+			$orderby = 'date';
+			$order = $settings['order'];
+		}
+
 		$featured_posts = get_posts( array(
 			'include'        => $post_ids,
 			'posts_per_page' => count( $post_ids ),
+			'orderby'        => $orderby,
+			'order'          => $order
 		) );
 
 		return $featured_posts;
@@ -167,6 +179,15 @@ class Featured_Content {
 			return self::get_sticky_posts();
 		}
 
+		if ( $settings['order'] == 'rand' ) {
+			$orderby = 'rand';
+			$order = 'asc';
+
+		} else {
+			$orderby = 'date';
+			$order = $settings['order'];
+		}
+
 		// Query for featured posts.
 		$featured = get_posts( array(
 			'numberposts' => $settings['quantity'],
@@ -177,6 +198,8 @@ class Featured_Content {
 					'terms'    => $tag,
 				),
 			),
+			'orderby'     => $orderby,
+			'order'       => $order
 		) );
 
 		// Return array with sticky posts if no Featured Content exists.
@@ -413,6 +436,11 @@ class Featured_Content {
 		) );
 
 		// Add Featured Content settings.
+		$wp_customize->add_setting( 'featured-content[order]', array(
+			'default'              => 'desc',
+			'type'                 => 'option',
+			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
+		) );
 		$wp_customize->add_setting( 'featured-content[tag-name]', array(
 			'default'              => 'featured',
 			'type'                 => 'option',
@@ -430,6 +458,17 @@ class Featured_Content {
 		) );
 
 		// Add Featured Content controls.
+		$wp_customize->add_control( 'featured-content[order]', array(
+			'label'    => __( 'Post order', 'longform' ),
+			'section'  => 'featured_content',
+			'type'       => 'select',
+			'choices'    => array(
+				'desc' => 'Descending',
+				'asc' => 'Ascending',
+				'rand' => 'Random'
+				),
+			'priority' => 15,
+		) );
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
 			'label'    => __( 'Tag Name', 'longform' ),
 			'section'  => 'featured_content',
@@ -487,6 +526,7 @@ class Featured_Content {
 			'quantity'   => 6,
 			'tag-id'     => 0,
 			'tag-name'   => 'featured',
+			'order'      => 'asc'
 		);
 
 		$options = wp_parse_args( $saved, $defaults );
@@ -540,6 +580,8 @@ class Featured_Content {
 		}
 
 		$output['hide-tag'] = isset( $input['hide-tag'] ) && $input['hide-tag'] ? 1 : 0;
+
+		$output['order'] = isset( $input['order'] ) && $input['order'] ? $input['order'] : 'asc';
 
 		// Delete the featured post ids transient.
 		self::delete_transient();
