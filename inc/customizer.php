@@ -274,11 +274,16 @@ if ( class_exists( 'WP_Customize_Section' ) && !class_exists( 'longform_Customiz
 					}
 					.cohhe-social-profiles li.documentation {
 						text-align: right;
+						margin-bottom: 10px;
+					}
+					.cohhe-social-profiles li.gopremium {
+						text-align: right;
 						margin-bottom: 60px;
 					}
 				</style>
 				<ul class="cohhe-social-profiles">
 					<li class="documentation"><a href="http://documentation.cohhe.com/longform" class="button button-primary button-hero" target="_blank"><?php _e( 'Documentation', 'longform' ); ?></a></li>
+					<li class="gopremium"><a href="http://cohhe.com/project-view/longform-pro/" class="button button-secondary button-hero" target="_blank"><?php _e( 'Go Premium', 'longform' ); ?></a></li>
 					<li class="social-twitter"><i class="twitter"></i><a href="https://twitter.com/Cohhe_Themes" target="_blank"><?php _e( 'Follow us on Twitter', 'longform' ); ?></a></li>
 					<li class="social-facebook"><i class="facebook"></i><a href="https://www.facebook.com/cohhethemes" target="_blank"><?php _e( 'Join us on Facebook', 'longform' ); ?></a></li>
 					<li class="social-googleplus"><i class="googleplus"></i><a href="https://plus.google.com/+Cohhe_Themes/posts" target="_blank"><?php _e( 'Join us on Google+', 'longform' ); ?></a></li>
