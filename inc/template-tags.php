@@ -187,6 +187,7 @@ function longform_post_thumbnail() {
 	if ( is_single() ) :
 	?>
 	<?php
+		return;
 		the_post_thumbnail( 'longform-huge-width' );
 	?>
 

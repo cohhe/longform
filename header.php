@@ -84,7 +84,7 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 		</div>
 		<div class="header-content">
 			<div class="header-main">
-				<div class="site-title col-xs-5 col-sm-5 col-md-4">
+				<div class="site-title col-xs-5 col-sm-5 col-md-3">
 					<?php
 					if ( ! empty ( $logo ) ) {?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $logo; ?>"></a>
@@ -106,7 +106,7 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<div class="main-header-right-side col-xs-5 col-sm-5 col-md-8">
+				<div class="main-header-right-side col-xs-5 col-sm-5 col-md-9">
 					<div class="header-search">
 						<form action="" method="get" class="header-search-form">
 							<input type="text" name="s" value="" placeholder="<?php _e( 'Search', 'longform' ); ?>">
@@ -214,7 +214,7 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 			$story_id = get_option('asf_story_id');
 			?>
 			<div class="intro-effect-bg-img-container container">
-				<div class="intro-effect-bg-img">
+				<div class="intro-effect-bg-img" style="">
 					<?php echo get_the_post_thumbnail($story_id, 'longform-huge-width' ); ?>
 				</div>
 				<?php echo '<h1 class="entry-title">' . get_the_title( $story_id ) . '</h1>'; ?>
@@ -237,7 +237,7 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 			</div>
 		<?php } else if ( is_single() && has_post_thumbnail() ) { ?>
 			<div class="intro-effect-bg-img-container container">
-				<div class="intro-effect-bg-img">
+				<div class="intro-effect-bg-img" style="background: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ); ?>) no-repeat">
 					<?php longform_post_thumbnail(); ?>
 				</div>
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
