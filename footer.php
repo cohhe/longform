@@ -22,7 +22,7 @@
 				<div class="site-info-content">
 					<div class="copyright">
 						<?php echo get_theme_mod('longform_copyright', ''); ?> 
-						<?php _e( 'Created by', 'longform' ); ?> <a href="http://cohhe.com/" target="_blank">Cohhe</a>. 
+						<?php _e( 'Created by', 'longform' ); ?> <a href="https://cohhe.com/" target="_blank">Cohhe</a>. 
 						<?php _e( 'Proudly powered by', 'longform' ); ?> <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'longform' ) ); ?>" target="_blank"><?php _e( 'WordPress', 'longform' ); ?></a>
 					</div>
 					<div class="footer-menu">
