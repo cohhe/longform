@@ -1,0 +1,94 @@
+Longform changelog
+
+= Version 1.5.8 =
+* Changed cohhe.com links to https
+
+= Version 1.5.7 =
+* Fixed some responsiveness issues
+
+= Version 1.5.6 =
+* Fixed aesop quote component
+* Fixed Theme Check issues
+
+= Version 1.5.5 =
+* Fixed single article image ratio
+* Fixed Menu responsiveness
+
+= Version 1.5.4 =
+* Added Go Premium button at customizer
+
+= Version 1.5.3 =
+* Featured content order at customizer
+* Updated language files
+
+= Version 1.5.2 =
+* Added featured content limit option
+* Fixed header logo picture issue
+
+= Version 1.5.1 =
+* Added documentation button at customizer
+
+= Version 1.5 =
+* Updated screenshot
+* Added missing language string
+* Fixed notices
+
+= Version 1.4.2 =
+* Improved mobile menu
+
+= Version 1.4.2 =
+* Moved Theme Options to Customizer
+
+= Version 1.4.1 =
+* Updated screenshot
+
+= Version 1.4 - =
+* Made compatible with aesop addons and lasso
+
+= Version 1.3 =
+* Updated theme description
+
+= Version 1.2 =
+* Moved OptionTree outside theme
+
+= Version 1.0.9 =
+* Styled aesop collection component
+
+= Version 1.0.8 =
+* Made OptionTree as not required
+
+= Version 1.0.7 =
+* Moved OptionTree outside theme
+
+= Version 1.0.6 =
+* Fixed contact form issue
+* Fixed OptionTree integration issues
+
+= Version 1.0.6 =
+* Fixed line endings
+
+= Version 1.0.5 =
+* Updated readme file
+
+= Version 1.0.4 =
+* Fixed notices
+* Updated licensing information
+
+= Version 1.0.3 =
+* Added unminified animate.css and html5.js
+* Added licensing and readme file
+* Removed protocol from google font url
+* Fixed errors
+* Added prefixes for variables
+* Included unminified copy of all CSS and JS
+* Changed text domain
+
+= Version 1.0.2 =
+* Styled Aesop character module
+
+= Version 1.0.1 =
+* Fixed responsiveness issues
+* Fixed mobile devices scrolling issue
+
+= Version 1.0 =
+* Initial release
