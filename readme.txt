@@ -1,4 +1,4 @@
-Longform, Copyright 2015 Cohhe
+Longform, Copyright 2015 Cohhe https://cohhe.com/
 Longform is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
