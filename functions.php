@@ -406,6 +406,7 @@ endif;
  * @return array The filtered body class list.
  */
 function longform_body_classes( $classes ) {
+	global $wp_version;
 	$longform_layout = '';
 
 	if ( is_multi_author() ) {
@@ -437,6 +438,10 @@ function longform_body_classes( $classes ) {
 		$classes[] = 'slider';
 	} elseif ( is_front_page() ) {
 		$classes[] = 'grid';
+	}
+
+	if ( version_compare($wp_version, '4.4', '>=') ) {
+		$classes[] = 'wp-post-4-4';
 	}
 
 	return $classes;
