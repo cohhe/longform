@@ -283,6 +283,13 @@ class Featured_Content {
 		// We need to respect post ids already in the blacklist.
 		$post__not_in = $query->get( 'post__not_in' );
 
+		// Check if posts need to be hidden
+		if ( self::get_setting( 'hide-tag' ) ) {
+			$featured = self::get_featured_post_ids();
+		} else {
+			$featured = array();
+		}
+
 		if ( ! empty( $post__not_in ) ) {
 			$featured = array_merge( (array) $post__not_in, $featured );
 			$featured = array_unique( $featured );
