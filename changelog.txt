@@ -1,5 +1,13 @@
 Longform changelog
 
+= Version 1.6 =
+* Fixed header scrolling issue
+
+= Version 1.5.9 =
+* Fixed featured content customizer issue
+* WordPress 4.4 support
+* Fixed minor styling issues
+
 = Version 1.5.8 =
 * Changed cohhe.com links to https
 
