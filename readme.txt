@@ -16,6 +16,8 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 Longform is based on Underscores http://underscores.me/, (coffee) 2012-2014 Automattic, Inc.
 
+Longform project page https://cohhe.com/project-view/longform/
+
 Longform bundles the following third-party resources:
 
 Genericons icon font, Copyright 2013 Automattic
