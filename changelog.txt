@@ -1,5 +1,8 @@
 Longform changelog
 
+= Version 1.6.1 =
+* Added welcome screen
+
 = Version 1.6 =
 * Fixed header scrolling issue
 
