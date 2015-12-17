@@ -62,6 +62,7 @@ if ( ! function_exists( 'longform_setup' ) ) :
 	 */
 	function longform_setup() {
 		require(get_template_directory() . '/inc/metaboxes/layouts.php');
+		require_once(get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php');
 
 		/*
 		 * Make Longform 1.0 available for translation.
