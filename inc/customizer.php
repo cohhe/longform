@@ -212,6 +212,30 @@ function longform_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Stories order
+	$wp_customize->add_section( 'longform_stories_order', array(
+		'priority'       => 20,
+		'capability'     => 'edit_theme_options',
+		'title'          => __( 'Stories order' , 'longform'),
+		'description'    => __( 'The order for stories page' , 'longform'),
+		'panel'          => 'longform_stories_panel'
+	) );
+
+	$wp_customize->add_setting( 'longform_stories_main_order', array( 'default' => 'ASC', 'sanitize_callback' => 'sanitize_text_field' ) );
+
+	$wp_customize->add_control(
+		'longform_stories_main_order',
+		array(
+			'label'      => 'Stories order',
+			'section'    => 'longform_stories_order',
+			'type'       => 'select',
+			'choices' => array(
+				'ASC' => __( 'Ascending', 'longform' ),
+				'DESC' => __( 'Descending', 'longform' )
+			),
+		)
+	);
+
 	// Social links
 	$wp_customize->add_section( new longform_Customized_Section( $wp_customize, 'longform_social_links', array(
 		'priority'       => 300,

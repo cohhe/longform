@@ -1,5 +1,8 @@
 Longform changelog
 
+= Version 1.6.2 =
+* Added order option for story grid
+
 = Version 1.6.1 =
 * Added welcome screen
 

@@ -18,6 +18,8 @@ $longform_featured_post_class     = 'col-sm-4 col-md-4 col-lg-4';
 $longform_featured_post_thumbnail = 'longform-thumbnail-large';
 $grid_tag                         = get_theme_mod('longform_stories_tag', '');
 $grid_stories_count               = get_theme_mod('longform_stories_per_page', '');
+$grid_stories_order               = get_theme_mod('longform_stories_main_order', 'ASC');
+
 
 // If tag isn't specified then use default one
 if ( empty($grid_tag) ) {
@@ -33,7 +35,7 @@ $args = array(
 	'posts_per_page'   => $grid_stories_count,
 	'tag'              => $grid_tag,
 	'orderby'          => 'order',
-	'order'            => 'ASC',
+	'order'            => $grid_stories_order,
 	'post_type'        => 'post',
 	'post_status'      => 'publish',
 	'suppress_filters' => true
