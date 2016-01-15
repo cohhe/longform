@@ -44,7 +44,6 @@ global $longform_article_width;
 			endif;
 		?>
 	</header><!-- .entry-header -->
-	
 	<?php if ( is_search() ) : ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
@@ -52,7 +51,12 @@ global $longform_article_width;
 	<?php else : ?>
 	<div class="entry-content">
 		<div id="entry-content-wrapper">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'longform' ) ); ?>
+			<?php if ( has_excerpt() && !is_single() ) {
+				the_excerpt();
+			} else {
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'longform' ) );
+			}
+			?>
 		</div>
 		<?php
 			wp_link_pages( array(
