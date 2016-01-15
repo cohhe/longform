@@ -248,6 +248,16 @@ function longform_widgets_init() {
 }
 add_action( 'widgets_init', 'longform_widgets_init' );
 
+function longform_fallback_page_menu() {    
+
+	echo '<div class="menu-primary-container"><ul id="menu-primary" class="nav-menu">';
+
+		wp_list_pages(array('title_li' => '', 'depth' => 1));
+
+    echo '</ul></div>';
+
+}
+
 /**
  * Register Lato Google font for Longform 1.0.
  *

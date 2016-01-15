@@ -120,6 +120,7 @@ if ( ( ( LONGFORM_LAYOUT == 'sidebar-left' && is_active_sidebar( 'sidebar-1' ) )
 									'theme_location' => 'primary',
 									'menu_class'     => 'nav-menu',
 									'depth'          => 3,
+									'fallback_cb'    => 'longform_fallback_page_menu',
 									'walker'         => new Longform_Header_Menu_Walker
 								)
 							);
