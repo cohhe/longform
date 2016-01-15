@@ -4,7 +4,7 @@ Theme URI: https://cohhe.com/project-view/longform/
 Author: Cohhe
 Author URI: https://cohhe.com/
 Description: Enhance your story experience, by leveraging the power of Longform Wordpress Theme, built especially for telling great stories. It is the only free WordPress theme fully compatible with the Aesop Story Engine.
-Version: 1.6.2
+Version: 1.6.3
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
@@ -1266,6 +1266,16 @@ p.site-description {
 	max-height: 60px;
 }
 
+body:not(.sticky_header_active) .main-header-right-side {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin-top: 1px;
+}
+
 .single-post .site-header.fixed.shrink .main-header-right-side,
 .aesop-story-front .site-header.fixed.shrink .main-header-right-side,
 .menu-header-right-side,
@@ -2134,10 +2144,10 @@ body .aesop-cc-edit {
 
 .intro-effect-fadeout.modify .intro-effect-bg-img {
 	-webkit-transform: translateY(-25%);
-    -moz-transform: translateY(-25%);
-    -o-transform: translateY(-25%);
-    -ms-transform: translateY(-25%);
-    transform: translateY(-25%);
+	-moz-transform: translateY(-25%);
+	-o-transform: translateY(-25%);
+	-ms-transform: translateY(-25%);
+	transform: translateY(-25%);
 }
 
 .intro-effect-fadeout .intro-effect-bg-img::after {

@@ -1,5 +1,10 @@
 Longform changelog
 
+= Version 1.6.3 =
+* Fixed footer widget issue and some styling
+* Fixed post excerpt
+* Added fallback menu
+
 = Version 1.6.2 =
 * Added order option for story grid
 
