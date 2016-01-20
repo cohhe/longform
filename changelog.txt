@@ -1,5 +1,8 @@
 Longform changelog
 
+= Version 1.6.4 =
+* Fixed some responsiveness issues
+
 = Version 1.6.3 =
 * Fixed footer widget issue and some styling
 * Fixed post excerpt
