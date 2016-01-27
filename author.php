@@ -15,11 +15,11 @@ global $longform_site_width;
 
 $sm_author_id          = get_the_author_meta( 'ID' );
 $sm_authot_description = get_the_author_meta( 'description', $sm_author_id );
+$author_style          = '';
+$social_content        = '';
+$author_class          = '';
 
 if ( function_exists('get_cimyFieldValue') ) {
-	$author_style                   = '';
-	$author_class                   = '';
-	$social_content                 = '';
 	$sm_author_social['twitter']    = get_cimyFieldValue($sm_author_id, 'USER-TWITTER');
 	$sm_author_social['facebook']   = get_cimyFieldValue($sm_author_id, 'USER-FACEBOOK');
 	$sm_author_social['pinterest']  = get_cimyFieldValue($sm_author_id, 'USER-PINTEREST');
