@@ -1,5 +1,9 @@
 Longform changelog
 
+= Version 1.6.5 =
+* Fixed related article issue while post has sidebar
+* Fixed notices at authors page
+
 = Version 1.6.4 =
 * Fixed some responsiveness issues
 
