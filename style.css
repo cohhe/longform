@@ -4,7 +4,7 @@ Theme URI: https://cohhe.com/project-view/longform/
 Author: Cohhe
 Author URI: https://cohhe.com/
 Description: Enhance your story experience, by leveraging the power of Longform Wordpress Theme, built especially for telling great stories. It is the only free WordPress theme fully compatible with the Aesop Story Engine.
-Version: 1.6.5
+Version: 1.6.6
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
@@ -521,6 +521,10 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: 23px;
+}
+
+iframe {
+	max-width: 100%;
 }
 
 span.title-first {
@@ -2003,10 +2007,10 @@ body:not(.sticky_header_active) .main-header-right-side {
 
 	body:not(.sticky_header_active) .main-header-right-side {
 		position: relative;
-	    top: 0;
-	    transform: none;
-	    -webkit-transform: none;
-    	-ms-transform: none;
+		top: 0;
+		transform: none;
+		-webkit-transform: none;
+		-ms-transform: none;
 	}
 }
 
@@ -3542,7 +3546,9 @@ body.archive .site-content > article:nth-of-type(1) {
 .without_thumbnail.container .entry-title,
 .intro-effect-fadeout .intro-effect-bg-img-container .entry-title {
 	font-size: 66px;
+	font-size: 3.45vmax;
 	line-height: 76px;
+	line-height: 4vmax;
 	margin-top: 30%;
 	text-align: center;
 	margin-right: auto;
@@ -5216,5 +5222,10 @@ div.wpcf7-mail-sent-ok {
 
 	.aesop-quote-component blockquote {
 		padding: 20px 20px;
+	}
+
+	article .entry-content table {
+		display: block;
+		overflow-x: auto;
 	}
 }
