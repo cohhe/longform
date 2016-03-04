@@ -429,6 +429,35 @@ $current_theme = wp_get_theme();
 			</div>
 		</div>
 
+		<hr class="bigger" />
+
+		<!-- Zap Lite -->
+		<div class="welcome-screen-child-theme-container">
+			<div class="welcome-screen-child-theme-image-container">
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/zap-lite.png'; ?>" alt="<?php esc_html_e( 'Zap Lite Theme', 'longform' ); ?>" />
+				<div class="welcome-screen-child-theme-description">
+					<h2><?php esc_html_e( 'Zap Lite', 'longform' ); ?></h2>
+					<p><?php esc_html_e( 'We can say with confidence that Zap Lite is the best free multipurpose WordPress theme. Designed to give a clean and fresh feel for your website, it puts most emphasis on the content.', 'longform' ); ?></p>
+				</div>
+			</div>
+			<div class="welcome-screen-child-theme-details">
+				<?php if ( 'Zap Lite' != $current_theme['Name'] ) { ?>
+					<div class="theme-details">
+						<span class="theme-name">Zap Lite</span>
+						<a href="https://cohhe.com/project-view/zap-lite/" class="button button-primary install right"><?php printf( __( 'Get %s now', 'longform' ), '<span class="screen-reader-text">Zap Lite</span>' ); ?></a>
+						<a class="button button-secondary preview right" target="_blank" href="http://cohhe.com/demo/zap/"><?php esc_html_e( 'Live Preview','longform'); ?></a>
+						<div class="welcome-screen-clear"></div>
+					</div>
+				<?php } else { ?>
+				<div class="theme-details active">
+					<span class="theme-name"><?php echo esc_html_e( 'Zap Lite - Current theme', 'longform' ); ?></span>
+					<a class="button button-secondary customize right" target="_blank" href="<?php echo get_site_url(). '/wp-admin/customize.php' ?>"><?php esc_html_e('Customize','longform'); ?></a>
+					<div class="welcome-screen-clear"></div>
+				</div>
+				<?php } ?>
+			</div>
+		</div>
+
 	</div>
 
 
