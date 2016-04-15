@@ -1,5 +1,8 @@
 Longform changelog
 
+= Version 1.6.8 =
+* Fixed single post related article responsiveness
+
 = Version 1.6.7 =
 * Updated welcome screen
 
