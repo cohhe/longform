@@ -1001,3 +1001,13 @@ function longform_admin_notice(){
 		<p>We made changes to Theme Options, your theme settings are now at <a href="'.$customizer_url.'">customizer</a> with your saved values and Option Tree is no longer needed.</p>
 	</div>';
 }
+
+if ( function_exists('wpsdc_shortcode') ) {
+	function longform_single_content($content){
+		if ( strpos($content, '<span class="wpsdc-drop-cap">') !== false ) {
+			$content = str_replace('<span class="wpsdc-drop-cap">', '<p><span class="wpsdc-drop-cap">', $content);
+		}
+		return $content;
+	}
+	add_filter( 'the_content', 'longform_single_content', 11 );
+}
