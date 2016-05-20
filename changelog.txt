@@ -1,5 +1,8 @@
 Longform changelog
 
+= Version 1.7 =
+* Added read more link is excerpt used
+
 = Version 1.6.9 =
 * Fixed link issue in customizer
 
