@@ -16,3 +16,71 @@ Description: Used to style the TinyMCE editor.
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
 	-webkit-filter: grayscale(0%);
 }
+
+.longform-rating-notice {
+	background: #fff;
+	border-top: 4px;
+	display: block;
+	min-height: 68px;
+	position: relative;
+	margin: 40px 20px 0 2px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	border: 1px solid #ccc;
+}
+
+.longform-notice-left {
+	float: left;
+	width: 5%;
+	padding: 12px;
+	box-sizing: border-box;
+}
+
+.longform-notice-left img {
+	width: 100%;
+	vertical-align: middle;
+}
+
+.longform-notice-center {
+	width: 75%;
+	float: left;
+	padding: 23px 6px;
+	box-sizing: border-box;
+}
+
+.longform-notice-right {
+	width: 20%;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+	height: 85px;
+	border-left: 1px solid #ccc;
+	margin-top: 0;
+	background-color: #f8f8f8;
+	text-align: center;
+}
+
+.longform-notice-center p {
+	margin: 0;
+}
+
+.longform-notice-right a {
+	float: none;
+	margin-top: 17px !important;
+	display: inline-block !important;
+}
+
+.longform-notice-right .longform-rating-dismiss {
+	margin-left: 10px;
+}
+
+.longform-rating-notice .clearfix:before,
+.longform-rating-notice .clearfix:after {
+	display: table;
+	content: " ";
+}
+
+.longform-rating-notice .clearfix:after {
+	clear: both;
+}

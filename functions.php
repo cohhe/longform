@@ -1011,3 +1011,41 @@ if ( function_exists('wpsdc_shortcode') ) {
 	}
 	add_filter( 'the_content', 'longform_single_content', 11 );
 }
+
+function longform_admin_rating_notice() {
+	$user = wp_get_current_user();
+	?>
+	<div class="longform-rating-notice">
+		<span class="longform-notice-left">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/logo-square.png" alt="">
+		</span>
+		<div class="longform-notice-center">
+			<p>Hi there, <?php echo $user->data->display_name; ?>, we noticed that you've been using Longform for a while now.</p>
+			<p>We spent many hours developing this free theme for you and we would appriciate if you supported us by rating it!</p>
+		</div>
+		<div class="longform-notice-right">
+			<a href="https://wordpress.org/support/view/theme-reviews/longform?rate=5#postform" class="button button-primary button-large longform-rating-rate">Rate at WordPress</a>
+			<a href="javascript:void(0)" class="button button-large preview longform-rating-dismiss">No, thanks</a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<?php
+}
+if ( get_option('longform_rating_notice') && get_option('longform_rating_notice') != 'hide' && time() - get_option('longform_rating_notice') > 432000 ) {
+	add_action( 'admin_notices', 'longform_admin_rating_notice' );
+}
+
+function longform_dismiss_rating_notice() {
+	update_option('longform_rating_notice', 'hide');
+
+	die(0);
+}
+add_action( 'wp_ajax_nopriv_longform_dismiss_notice', 'longform_dismiss_rating_notice' );
+add_action( 'wp_ajax_longform_dismiss_notice', 'longform_dismiss_rating_notice' );
+
+function longform_theme_activated() {
+	if ( !get_option('longform_rating_notice') ) {
+		update_option('longform_rating_notice', time());
+	}
+}
+add_action('after_switch_theme', 'longform_theme_activated');
