@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Longform v1.5.2\n"
+"Project-Id-Version: Longform v1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-08-21 12:29:58+0000\n"
+"PO-Revision-Date: 2016-06-28 13:26:50+0000\n"
 "Last-Translator: smaids <smaids2007@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -109,41 +109,41 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: content-aside.php:52
-#: content-audio.php:52
-#: content-gallery.php:47
-#: content-image.php:52
-#: content-link.php:52
-#: content-quote.php:52
-#: content-video.php:52
-#: content.php:55
-#@ longform
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
 #: content-aside.php:56
 #: content-audio.php:56
 #: content-gallery.php:51
 #: content-image.php:56
 #: content-link.php:56
-#: content-page.php:24
 #: content-quote.php:56
 #: content-video.php:56
-#: content.php:59
+#: content.php:58
+#@ longform
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-aside.php:62
+#: content-audio.php:62
+#: content-gallery.php:57
+#: content-image.php:62
+#: content-link.php:62
+#: content-page.php:24
+#: content-quote.php:62
+#: content-video.php:62
+#: content.php:64
 #: image.php:56
 #@ longform
 msgid "Pages:"
 msgstr ""
 
-#: content-aside.php:61
-#: content-audio.php:61
-#: content-gallery.php:56
-#: content-image.php:61
-#: content-link.php:61
+#: content-aside.php:67
+#: content-audio.php:67
+#: content-gallery.php:62
+#: content-image.php:67
+#: content-link.php:67
 #: content-page.php:30
-#: content-quote.php:61
-#: content-video.php:61
-#: content.php:64
+#: content-quote.php:67
+#: content-video.php:67
+#: content.php:69
 #: image.php:34
 #@ longform
 msgid "Edit"
@@ -195,56 +195,56 @@ msgstr ""
 msgid "Up"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:93
 #@ longform
 msgid "Top primary menu"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:94
 #@ longform
 msgid "Footer menu"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:214
 #@ longform
 msgid "Content Sidebar"
 msgstr ""
 
-#: functions.php:214
+#: functions.php:217
 #@ longform
 msgid "Additional sidebar that appears on the right."
 msgstr ""
 
-#: functions.php:221
+#: functions.php:224
 #@ longform
 msgid "Footer Widget Area 1"
 msgstr ""
 
-#: functions.php:223
-#: functions.php:232
-#: functions.php:241
+#: functions.php:226
+#: functions.php:235
+#: functions.php:244
 #@ longform
 msgid "Appears in the footer section of the site."
 msgstr ""
 
-#: functions.php:230
+#: functions.php:233
 #@ longform
 msgid "Footer Widget Area 2"
 msgstr ""
 
-#: functions.php:239
+#: functions.php:242
 #@ longform
 msgid "Footer Widget Area 3"
 msgstr ""
 
-#: functions.php:541
+#: functions.php:559
 #, php-format
 #@ longform
 msgid "Page %s"
 msgstr ""
 
-#: header.php:81
-#: header.php:112
+#: header.php:80
+#: header.php:111
 #@ longform
 msgid "Search"
 msgstr ""
@@ -284,7 +284,7 @@ msgid "Display Site Title &amp; Tagline"
 msgstr ""
 
 #: inc/customizer.php:35
-#: inc/featured-content.php:409
+#: inc/featured-content.php:439
 #@ longform
 msgid "Featured Content"
 msgstr ""
@@ -306,41 +306,41 @@ msgstr ""
 msgid "Slider"
 msgstr ""
 
-#: inc/customizer.php:338
+#: inc/customizer.php:367
 #@ longform
 msgid "Longform 1.0"
 msgstr ""
 
-#: inc/customizer.php:341
+#: inc/customizer.php:370
 #, php-format
 #@ longform
 msgid "The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by the <a href=\"%1$s\">featured</a> tag; you can change the tag and layout in <a href=\"%2$s\">Appearance &rarr; Customize</a>. If no posts match the tag, <a href=\"%3$s\">sticky posts</a> will be displayed instead."
 msgstr ""
 
-#: inc/customizer.php:342
+#: inc/customizer.php:371
 #, php-format
 #@ longform
 msgid "Enhance your site design by using <a href=\"%s\">Featured Images</a> for posts you&rsquo;d like to stand out (also known as post thumbnails). This allows you to associate an image with your post without inserting it. Longform 1.0 uses featured images for posts and pages&mdash;above the title&mdash;and in the Featured Content area on the home page."
 msgstr ""
 
-#: inc/customizer.php:343
+#: inc/customizer.php:372
 #, php-format
 #@ longform
 msgid "For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s\">Longform 1.0 documentation</a>."
 msgstr ""
 
-#: inc/featured-content.php:410
+#: inc/featured-content.php:440
 #, php-format
 #@ longform
 msgid "Use the <a href=\"%1$s\">\"featured\" tag</a> to feature your posts. You can change this to a tag of your choice; if no posts match the tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
 msgstr ""
 
-#: inc/featured-content.php:434
+#: inc/featured-content.php:480
 #@ longform
 msgid "Tag Name"
 msgstr ""
 
-#: inc/featured-content.php:439
+#: inc/featured-content.php:485
 #@ longform
 msgid "Don&rsquo;t display tag on front end."
 msgstr ""
@@ -376,7 +376,8 @@ msgstr ""
 msgid "Sticky"
 msgstr ""
 
-#: inc/customizer.php:281
+#: inc/admin/welcome-screen/sections/getting-started.php:25
+#: inc/customizer.php:309
 #@ longform
 msgid "Documentation"
 msgstr ""
@@ -387,8 +388,8 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2669
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2726
+#@ longform
 msgid "Activate"
 msgstr ""
 
@@ -397,8 +398,8 @@ msgstr ""
 msgid "Audio"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2515
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2549
+#@ longform
 msgid "Type"
 msgstr ""
 
@@ -483,37 +484,35 @@ msgstr ""
 msgid "Category Archives: <span>%s</span>"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:303
-#: functions.php:876
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:327
+#: functions.php:883
 #@ longform
 msgid "Install Required Plugins"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:304
-#: functions.php:877
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:328
+#: functions.php:884
 #@ longform
 msgid "Install Plugins"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:305
-#: functions.php:878
+#. translators: %s: plugin name.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:330
+#: functions.php:885
 #, php-format
-#@ tgmpa
 #@ longform
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:306
-#: functions.php:879
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:333
+#: functions.php:886
 #@ longform
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:308
-#: functions.php:880
+#. translators: 1: plugin name(s).
+#: functions/tgm-activation/class-tgm-plugin-activation.php:336
+#: functions.php:887
 #, php-format
 #@ longform
 msgid "This theme requires the following plugin: %1$s."
@@ -521,8 +520,9 @@ msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:313
-#: functions.php:881
+#. translators: 1: plugin name(s).
+#: functions/tgm-activation/class-tgm-plugin-activation.php:342
+#: functions.php:888
 #, php-format
 #@ longform
 msgid "This theme recommends the following plugin: %1$s."
@@ -530,16 +530,9 @@ msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:318
-#, php-format
-#@ longform
-msgid "Sorry, but you do not have the correct permissions to install the %1$s plugin."
-msgid_plural "Sorry, but you do not have the correct permissions to install the %1$s plugins."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:323
-#: functions.php:886
+#. translators: 1: plugin name(s).
+#: functions/tgm-activation/class-tgm-plugin-activation.php:348
+#: functions.php:893
 #, php-format
 #@ longform
 msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
@@ -547,7 +540,8 @@ msgid_plural "The following plugins need to be updated to their latest version t
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:328
+#. translators: 1: plugin name(s).
+#: functions/tgm-activation/class-tgm-plugin-activation.php:354
 #, php-format
 #@ longform
 msgid "There is an update available for: %1$s."
@@ -555,16 +549,9 @@ msgid_plural "There are updates available for the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:333
-#, php-format
-#@ longform
-msgid "Sorry, but you do not have the correct permissions to update the %1$s plugin."
-msgid_plural "Sorry, but you do not have the correct permissions to update the %1$s plugins."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:338
-#: functions.php:883
+#. translators: 1: plugin name(s).
+#: functions/tgm-activation/class-tgm-plugin-activation.php:360
+#: functions.php:890
 #, php-format
 #@ longform
 msgid "The following required plugin is currently inactive: %1$s."
@@ -572,8 +559,9 @@ msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:343
-#: functions.php:884
+#. translators: 1: plugin name(s).
+#: functions/tgm-activation/class-tgm-plugin-activation.php:366
+#: functions.php:891
 #, php-format
 #@ longform
 msgid "The following recommended plugin is currently inactive: %1$s."
@@ -581,422 +569,377 @@ msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:348
-#, php-format
-#@ longform
-msgid "Sorry, but you do not have the correct permissions to activate the %1$s plugin."
-msgid_plural "Sorry, but you do not have the correct permissions to activate the %1$s plugins."
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:353
-#: functions.php:888
+#: functions/tgm-activation/class-tgm-plugin-activation.php:371
+#: functions.php:895
 #@ longform
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:358
+#: functions/tgm-activation/class-tgm-plugin-activation.php:376
 #@ longform
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:363
+#: functions/tgm-activation/class-tgm-plugin-activation.php:381
 #@ longform
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:368
-#: functions.php:890
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:385
+#: functions.php:897
 #@ longform
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:369
-#@ tgmpa
-msgid "Return to the dashboard"
-msgstr ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:370
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3052
-#: functions.php:891
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:387
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3159
+#: functions.php:898
 #@ longform
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:372
+#. translators: 1: plugin name.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:390
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:373
+#. translators: 1: plugin name.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:392
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:374
+#. translators: 1: dashboard link.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:394
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:375
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:395
+#@ longform
 msgid "Dismiss this notice"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:376
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:397
+#@ longform
 msgid "Please contact the administrator of this site for help."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:494
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:522
+#@ longform
 msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:495
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:523
+#@ longform
 msgid "Update Required"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:612
-#@ tgmpa
-msgid "Set the parent_slug config variable instead."
-msgstr ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:811
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3470
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:386
+#: functions/tgm-activation/class-tgm-plugin-activation.php:827
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2533
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3580
+#@ longform
 msgid "Return to the Dashboard"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:926
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:934
+#@ longform
 msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:926
-#: functions/tgm-activation/class-tgm-plugin-activation.php:930
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:934
+#: functions/tgm-activation/class-tgm-plugin-activation.php:937
+#@ longform
 msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:930
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:937
+#@ longform
 msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:1115
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2869
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:1121
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2948
+#@ longform
 msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:1937
-#, php-format
-#@ tgmpa
-msgctxt "%s = version number"
-msgid "TGMPA v%s"
-msgstr ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2218
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2273
+#@ longform
 msgid "Required"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2221
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2276
+#@ longform
 msgid "Recommended"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2238
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2292
+#@ longform
 msgid "WordPress Repository"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2242
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2295
+#@ longform
 msgid "External Source"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2246
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2298
+#@ longform
 msgid "Pre-Packaged"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2265
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2315
+#@ longform
 msgid "Not Installed"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2269
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2319
+#@ longform
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2271
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2321
+#@ longform
 msgid "Active"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2277
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2327
+#@ longform
 msgid "Required Update not Available"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2280
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2330
+#@ longform
 msgid "Requires Update"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2283
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2333
+#@ longform
 msgid "Update recommended"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2291
+#. translators: 1: number of plugins.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2388
 #, php-format
-#@ tgmpa
-msgctxt "%1$s = install status, %2$s = update status"
-msgid "%1$s, %2$s"
-msgstr ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2340
-#, php-format
-#@ tgmpa
+#@ longform
 msgctxt "plugins"
 msgid "All <span class=\"count\">(%s)</span>"
 msgid_plural "All <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2344
+#. translators: 1: number of plugins.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2392
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2348
+#. translators: 1: number of plugins.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2396
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2352
+#. translators: 1: number of plugins.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2400
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2445
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2482
+#@ longform
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2453
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2490
+#@ longform
 msgid "Installed version:"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2461
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2498
+#@ longform
 msgid "Minimum required version:"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2473
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2510
+#@ longform
 msgid "Available version:"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2497
-#, php-format
-#@ tgmpa
-msgid "No plugins to install, update or activate. <a href=\"%1$s\">Return to the Dashboard</a>"
-msgstr ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2513
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2547
+#@ longform
 msgid "Plugin"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2514
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2548
+#@ longform
 msgid "Source"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2519
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2553
+#@ longform
 msgid "Version"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2520
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2554
+#@ longform
 msgid "Status"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2544
-#, php-format
-#@ tgmpa
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Install %2$s"
-msgstr ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2550
-#, php-format
-#@ tgmpa
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Update %2$s"
-msgstr ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2556
-#, php-format
-#@ tgmpa
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Activate %2$s"
-msgstr ""
-
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2627
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2684
+#@ longform
 msgid "Upgrade message from the plugin author:"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2660
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2717
+#@ longform
 msgid "Install"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2666
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2723
+#@ longform
 msgid "Update"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2730
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2800
+#@ longform
 msgid "No plugins are available to be installed at this time."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2732
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2802
+#@ longform
 msgid "No plugins are available to be updated at this time."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2855
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2934
+#@ longform
 msgid "No plugins are available to be activated at this time."
 msgstr ""
 
 #. gettext fix: identical singular and plural forms found, that may be ambiguous! Please check the code!
-#: functions/tgm-activation/class-tgm-plugin-activation.php:2873
-#: functions/tgm-activation/class-tgm-plugin-activation.php:371
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2952
+#: functions/tgm-activation/class-tgm-plugin-activation.php:388
+#@ longform
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3051
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3158
+#@ longform
 msgid "Plugin activation failed."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3390
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3498
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3394
+#. translators: 1: plugin name, 2: error message.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3501
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3395
+#. translators: 1: plugin name.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3503
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "The installation of %1$s failed."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3399
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3507
+#@ longform
 msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3400
+#. translators: 1: plugin name.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3509
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3400
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3407
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3509
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3517
+#@ longform
 msgid "Show Details"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3400
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3407
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3509
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3517
+#@ longform
 msgid "Hide Details"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3401
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3510
+#@ longform
 msgid "All installations and activations have been completed."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3402
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3512
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3406
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3515
+#@ longform
 msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3407
+#. translators: 1: plugin name.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3517
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "%1$s installed successfully."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3408
-#@ tgmpa
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3518
+#@ longform
 msgid "All installations have been completed."
 msgstr ""
 
-#: functions/tgm-activation/class-tgm-plugin-activation.php:3409
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:3520
 #, php-format
-#@ tgmpa
+#@ longform
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: functions.php:490
+#: functions.php:508
 #@ longform
 msgid "Related articles"
 msgstr ""
 
-#: functions.php:882
+#: functions.php:889
 #, php-format
 #@ longform
 msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
@@ -1004,7 +947,7 @@ msgid_plural "Sorry, but you do not have the correct permissions to install the 
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:885
+#: functions.php:892
 #, php-format
 #@ longform
 msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
@@ -1012,7 +955,7 @@ msgid_plural "Sorry, but you do not have the correct permissions to activate the
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:887
+#: functions.php:894
 #, php-format
 #@ longform
 msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
@@ -1020,20 +963,20 @@ msgid_plural "Sorry, but you do not have the correct permissions to update the %
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:889
+#: functions.php:896
 #@ longform
 msgid "Activate installed plugin"
 msgid_plural "Activate installed plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:892
+#: functions.php:899
 #, php-format
 #@ longform
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
-#: functions.php:988
+#: functions.php:995
 #@ longform
 msgid "STORIES ARE MEANT TO BE SHARED..."
 msgstr ""
@@ -1120,27 +1063,27 @@ msgstr ""
 msgid "How much stories should be showed per page?"
 msgstr ""
 
-#: inc/customizer.php:282
+#: inc/customizer.php:311
 #@ longform
 msgid "Follow us on Twitter"
 msgstr ""
 
-#: inc/customizer.php:283
+#: inc/customizer.php:312
 #@ longform
 msgid "Join us on Facebook"
 msgstr ""
 
-#: inc/customizer.php:284
+#: inc/customizer.php:313
 #@ longform
 msgid "Join us on Google+"
 msgstr ""
 
-#: inc/customizer.php:285
+#: inc/customizer.php:314
 #@ longform
 msgid "Cohhe.com"
 msgstr ""
 
-#: inc/featured-content.php:445
+#: inc/featured-content.php:491
 #@ longform
 msgid "Post limit"
 msgstr ""
@@ -1167,5 +1110,701 @@ msgstr ""
 #, php-format
 #@ longform
 msgid "Tag Archives: <span>%s</span>"
+msgstr ""
+
+#: content-aside.php:54
+#: content-audio.php:54
+#: content-gallery.php:49
+#: content-image.php:54
+#: content-link.php:54
+#: content-quote.php:54
+#: content-video.php:54
+#: content.php:56
+#@ longform
+msgid "Continue reading"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: functions/tgm-activation/class-tgm-plugin-activation.php:332
+#, php-format
+#@ longform
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: functions/tgm-activation/class-tgm-plugin-activation.php:396
+#@ longform
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#. translators: %s: version number
+#: functions/tgm-activation/class-tgm-plugin-activation.php:1982
+#, php-format
+#@ longform
+msgid "TGMPA v%s"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2342
+#, php-format
+#@ longform
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2533
+#@ longform
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2603
+#, php-format
+#@ longform
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2608
+#, php-format
+#@ longform
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2614
+#, php-format
+#@ longform
+msgid "Activate %2$s"
+msgstr ""
+
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2757
+#@ longform
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2759
+#@ longform
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: functions/tgm-activation/class-tgm-plugin-activation.php:2908
+#@ longform
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:21
+#@ longform
+msgid "Retina Ready"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:22
+#@ longform
+msgid "All the theme graphics scale beautifully on hi-def screens."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:29
+#@ longform
+msgid "Theme Documentation"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:30
+#@ longform
+msgid "This theme comes with amazing documentation."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:37
+#@ longform
+msgid "Ultra Responsive"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:38
+#@ longform
+msgid "This Theme is completely responsive."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:45
+#@ longform
+msgid "Advanced Options"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:46
+#@ longform
+msgid "With our Advanced Customizations Panel you can change the overall Layout of your Website in no time."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:53
+#@ longform
+msgid "Translation and Multilingual ready"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:54
+#@ longform
+msgid "Theme is translation ready. It is also compatible with WPML.org plugin."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:61
+#@ longform
+msgid "Full Aesop Compatibility"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:62
+#@ longform
+msgid "The only free WordPress theme designed to be fully compatible with the powerful Aesop Story Engine plugin."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:69
+#@ longform
+msgid "Advanced Widgets Manager"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:70
+#@ longform
+msgid "You can create as many widget containers as you need and can assign different ones for every page."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:77
+#@ longform
+msgid "Fonts Customizer"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:78
+#@ longform
+msgid "Theme allows you to completely change your themes fonts."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:85
+#@ longform
+msgid "CSS and JS customizer"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:86
+#@ longform
+msgid "Theme provides dedicated CSS and JS fields for simple customizations."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:93
+#@ longform
+msgid "Priority Support"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:94
+#@ longform
+msgid "You will get an access to our premium technical support where we answer each ticket as if it was our own."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:101
+#@ longform
+msgid "Colors Customizer"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:102
+#@ longform
+msgid "Theme has an advanced colors customizer that allows you to customize every element with the color that you desire."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:109
+#@ longform
+msgid "Unique Installation Wizard"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:110
+#@ longform
+msgid "Theme uses our unique installation wizard which makes installation process especially easy."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:117
+#@ longform
+msgid "No credit footer link"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:118
+#@ longform
+msgid "Remove \"CREATED BY COHHE. PROUDLY POWERED BY WORDPRESS\" copyright from the footer."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/free_pro.php:125
+#@ longform
+msgid "Get Longform Pro now!"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:16
+#@ longform
+msgid "Longform is an advanced, feature-rich WordPress theme built especially for telling great stories."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:17
+#@ longform
+msgid "To ensure you have the best experience while using Longform, we have created this simple dashboard. Here you will find all information necessary to start using your theme."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:26
+#@ longform
+msgid "In case you need help with Longform, plese check the detailed documentation."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:27
+#@ longform
+msgid "View documentation"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:35
+#: inc/admin/welcome-screen/welcome-screen.php:207
+#@ longform
+msgid "Getting started"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:37
+#@ longform
+msgid "Customize everything in a single place."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:38
+#@ longform
+msgid "Using the WordPress Customizer you can easily customize every aspect of the theme."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:39
+#@ longform
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:47
+#@ longform
+msgid "Get a whole new look for your site"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:49
+#@ longform
+msgid "Below you will find a selection of Cohhe themes that will totally transform the look of your site."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:58
+#@ longform
+msgid "Jobera Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:60
+#@ longform
+msgid "Jobera"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:61
+#@ longform
+msgid "Jobera — the easiest to use job board theme available. Create a community of employers and prospective employees."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:68
+#: inc/admin/welcome-screen/sections/getting-started.php:97
+#: inc/admin/welcome-screen/sections/getting-started.php:126
+#: inc/admin/welcome-screen/sections/getting-started.php:155
+#: inc/admin/welcome-screen/sections/getting-started.php:184
+#: inc/admin/welcome-screen/sections/getting-started.php:213
+#: inc/admin/welcome-screen/sections/getting-started.php:242
+#: inc/admin/welcome-screen/sections/getting-started.php:273
+#: inc/admin/welcome-screen/sections/getting-started.php:302
+#: inc/admin/welcome-screen/sections/getting-started.php:331
+#: inc/admin/welcome-screen/sections/getting-started.php:360
+#: inc/admin/welcome-screen/sections/getting-started.php:389
+#: inc/admin/welcome-screen/sections/getting-started.php:418
+#: inc/admin/welcome-screen/sections/getting-started.php:447
+#, php-format
+#@ longform
+msgid "Get %s now"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:69
+#: inc/admin/welcome-screen/sections/getting-started.php:98
+#: inc/admin/welcome-screen/sections/getting-started.php:127
+#: inc/admin/welcome-screen/sections/getting-started.php:156
+#: inc/admin/welcome-screen/sections/getting-started.php:185
+#: inc/admin/welcome-screen/sections/getting-started.php:214
+#: inc/admin/welcome-screen/sections/getting-started.php:243
+#: inc/admin/welcome-screen/sections/getting-started.php:274
+#: inc/admin/welcome-screen/sections/getting-started.php:303
+#: inc/admin/welcome-screen/sections/getting-started.php:332
+#: inc/admin/welcome-screen/sections/getting-started.php:361
+#: inc/admin/welcome-screen/sections/getting-started.php:390
+#: inc/admin/welcome-screen/sections/getting-started.php:419
+#: inc/admin/welcome-screen/sections/getting-started.php:448
+#@ longform
+msgid "Live Preview"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:74
+#@ longform
+msgid "Jobera - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:75
+#: inc/admin/welcome-screen/sections/getting-started.php:104
+#: inc/admin/welcome-screen/sections/getting-started.php:133
+#: inc/admin/welcome-screen/sections/getting-started.php:162
+#: inc/admin/welcome-screen/sections/getting-started.php:191
+#: inc/admin/welcome-screen/sections/getting-started.php:220
+#: inc/admin/welcome-screen/sections/getting-started.php:249
+#: inc/admin/welcome-screen/sections/getting-started.php:280
+#: inc/admin/welcome-screen/sections/getting-started.php:309
+#: inc/admin/welcome-screen/sections/getting-started.php:338
+#: inc/admin/welcome-screen/sections/getting-started.php:367
+#: inc/admin/welcome-screen/sections/getting-started.php:396
+#: inc/admin/welcome-screen/sections/getting-started.php:425
+#: inc/admin/welcome-screen/sections/getting-started.php:454
+#@ longform
+msgid "Customize"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:87
+#@ longform
+msgid "Viva Hotel Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:89
+#@ longform
+msgid "Viva Hotel"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:90
+#@ longform
+msgid "Viva hotel is a WordPress theme designed for hotels, hostels, resorts, spas and any other type of service which requires a booking type system."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:103
+#@ longform
+msgid "Viva Hotel - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:116
+#@ longform
+msgid "Seatera Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:118
+#@ longform
+msgid "Seatera"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:119
+#@ longform
+msgid "Seatera is a powerful, feature-rich seat reservation WordPress theme which is suitable for any type of cinema, movie promotion, theaters, blogs and movie communities. Seatera lets you customize a wide variety of features from the comfort of your Dashboard."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:132
+#@ longform
+msgid "Seatera - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:145
+#@ longform
+msgid "Mobera Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:147
+#@ longform
+msgid "Mobera"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:148
+#@ longform
+msgid "Mobera is clean and modern MultiPurpose App Showcase WordPress Theme. Elegant objects and background’s animation, neat execution, attention to details and the broadest settings spectrum."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:161
+#@ longform
+msgid "Mobera - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:174
+#@ longform
+msgid "Environmental Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:176
+#@ longform
+msgid "Environmental"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:177
+#@ longform
+msgid "Environmental is a beautiful, responsive WordPress theme designed specifically for the needs of non-profits who do environment or humanitarian work."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:190
+#@ longform
+msgid "Environmental - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:203
+#: inc/admin/welcome-screen/sections/getting-started.php:408
+#@ longform
+msgid "Longform Pro Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:205
+#: inc/admin/welcome-screen/sections/getting-started.php:410
+#@ longform
+msgid "Longform Pro"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:206
+#@ longform
+msgid "Longform Pro is clean, modern, responsive and highly customizable premium WooCommerce theme. It’s perfect for any kind of web shop. It looks great with all types of devices (laptops, tablets and mobiles)."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:219
+#: inc/admin/welcome-screen/sections/getting-started.php:424
+#@ longform
+msgid "Longform Pro - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:232
+#@ longform
+msgid "Matte Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:234
+#@ longform
+msgid "Matte"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:235
+#@ longform
+msgid "Matte is responsive WordPress blog theme with a clean design and modern look. Matte theme is really flexible and easy to use. It can be used for business, blog, personal, travel and many more. "
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:248
+#@ longform
+msgid "Matte - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:263
+#@ longform
+msgid "Snaptube Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:265
+#@ longform
+msgid "Snaptube"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:266
+#@ longform
+msgid "Snaptube is an advanced solution for Video hosting websites, Video portfolio and Magazine. It will help you get a professional video site up and running quickly, it is inspired by the popular websites: YouTube, Vimeo and Dribbble."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:279
+#@ longform
+msgid "Snaptube - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:292
+#@ longform
+msgid "Animal Care Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:294
+#@ longform
+msgid "Animal Care"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:295
+#@ longform
+msgid "Animal Care theme ideal for nonprofits, charities, activists and political campaigns. It is a powerful, feature-rich theme that lets you customize a wide variety of features from the comfort of your Dashboard."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:308
+#@ longform
+msgid "Animal Care - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:321
+#@ longform
+msgid "Rive Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:323
+#@ longform
+msgid "Rive"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:324
+#@ longform
+msgid "Rive theme is especially designed for charity, NGO, non-profit organization, donation, church or fundraising website. It is packed with amazing donation system and you only need to enter your PayPal address or Authorize.net API details to start using it!"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:337
+#@ longform
+msgid "Rive - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:350
+#@ longform
+msgid "Everal Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:352
+#@ longform
+msgid "Everal"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:353
+#@ longform
+msgid "Everal is FREE and clean, modern, user friendly, highly customizable and responsive Wordpress blog theme, built for especially for you."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:366
+#@ longform
+msgid "Everal - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:379
+#@ longform
+msgid "Sky Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:381
+#@ longform
+msgid "Sky"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:382
+#@ longform
+msgid "Sky is a beautiful, responsive, 3-in-1 WordPress listings theme. Its flexible design options make Sky perfect for listing Bed & Breakfast bookings, Vacation Packages, Estates, General Directories, and more."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:395
+#@ longform
+msgid "Sky - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:411
+#@ longform
+msgid "Enhance your story experience, by leveraging the power of Longform Pro Wordpress Theme, built especially for telling great stories."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:437
+#@ longform
+msgid "Zap Lite Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:439
+#@ longform
+msgid "Zap Lite"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:440
+#@ longform
+msgid "We can say with confidence that Zap Lite is the best free multipurpose WordPress theme. Designed to give a clean and fresh feel for your website, it puts most emphasis on the content."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:453
+#@ longform
+msgid "Zap Lite - Current theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/github.php:9
+#@ longform
+msgid "Can I Contribute?"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/github.php:11
+#@ longform
+msgid "Found a bug?"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/github.php:12
+#@ longform
+msgid "Want to contribute with a fix or create a new feature?"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/github.php:13
+#@ longform
+msgid "GitHub is the place to go!"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/github.php:16
+#@ longform
+msgid "Longform on GitHub"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/github.php:19
+#@ longform
+msgid "Or would you like to translate Longform to your language? Get involved at wordpress.org."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/github.php:22
+#@ longform
+msgid "Translate Longform"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/github.php:25
+#@ longform
+msgid "Are you enjoying Longform?"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/github.php:27
+#, php-format
+#@ longform
+msgid "Leave us a review on %sWordPress.org%s. We'd really appreciate it!"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:63
+#, php-format
+#@ longform
+msgid "Welcome! Thank you for choosing Longform! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s."
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:64
+#@ longform
+msgid "Get started with Longform"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:102
+#@ longform
+msgid "Hooray! There are no required actions for you right now."
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:139
+#@ longform
+msgid "View Theme Info"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:208
+#@ longform
+msgid "Contribute"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:209
+#@ longform
+msgid "Free VS PRO"
+msgstr ""
+
+#: inc/customizer.php:219
+#@ longform
+msgid "Stories order"
+msgstr ""
+
+#: inc/customizer.php:220
+#@ longform
+msgid "The order for stories page"
+msgstr ""
+
+#: inc/customizer.php:233
+#@ longform
+msgid "Ascending"
+msgstr ""
+
+#: inc/customizer.php:234
+#@ longform
+msgid "Descending"
+msgstr ""
+
+#: inc/customizer.php:310
+#@ longform
+msgid "Go Premium"
+msgstr ""
+
+#: inc/featured-content.php:469
+#@ longform
+msgid "Post order"
 msgstr ""
 

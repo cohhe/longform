@@ -123,6 +123,8 @@ if ( ! function_exists( 'longform_setup' ) ) :
 
 		// This theme uses its own gallery styles.
 		add_filter( 'use_default_gallery_style', '__return_false' );
+
+		add_theme_support( 'title-tag' );
 	}
 endif; // longform_setup
 add_action( 'after_setup_theme', 'longform_setup' );
@@ -872,8 +874,7 @@ function vh_register_required_plugins() {
 	$config = array(
 		'domain'       		=> 'longform',         	// Text domain - likely want to be the same as your theme.
 		'default_path' 		=> '',                         	// Default absolute path to pre-packaged plugins
-		'parent_menu_slug' 	=> 'themes.php', 				// Default parent menu slug
-		'parent_url_slug' 	=> 'themes.php', 				// Default parent URL slug
+		'parent_slug' 	=> 'themes.php', 				// Default parent menu slug
 		'menu'         		=> 'install-required-plugins', 	// Menu slug
 		'has_notices'      	=> true,                       	// Show admin notices or not
 		'is_automatic'    	=> true,					   	// Automatically activate plugins after installation or not

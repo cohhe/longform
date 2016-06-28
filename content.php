@@ -53,7 +53,7 @@ global $longform_article_width;
 		<div id="entry-content-wrapper">
 			<?php if ( has_excerpt() && !is_single() ) {
 				the_excerpt();
-				echo '<a href="' . get_the_permalink() . '" class="more-link">' . __( 'Continue reading', 'boron' ) . '</a>';
+				echo '<a href="' . get_the_permalink() . '" class="more-link">' . __( 'Continue reading', 'longform' ) . '</a>';
 			} else {
 				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'longform' ) );
 			}
