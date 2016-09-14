@@ -478,6 +478,16 @@ function scrollPageToTop(){
 		}
 	}
 
+	jQuery(window).bind('mousewheel DOMMouseScroll', function(event) {
+		if ( jQuery('body').hasClass( 'modify' ) ) {
+			setTimeout(function() {
+				if ( jQuery(document).scrollTop() == 0 ) {
+					toggle(0);
+				}
+			}, 50);
+		}
+	});
+
 	function toggle( reveal ) {
 		isAnimating = true;
 		
