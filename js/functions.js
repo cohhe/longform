@@ -454,12 +454,6 @@ function scrollPageToTop(){
 
 	function scrollPage() {
 		scrollVal = scrollY();
-		
-		if( noscroll && !ie ) {
-			if( scrollVal < 0 ) return false;
-			// keep it that way
-			window.scrollTo( 0, 0 );
-		}
 
 		if( jQuery('body').hasClass( 'notrans' ) ) {
 			jQuery('body').removeClass( 'notrans' );
@@ -478,6 +472,16 @@ function scrollPageToTop(){
 		}
 	}
 
+	jQuery(window).bind('mousewheel DOMMouseScroll', function(event) {
+		if ( jQuery('body').hasClass( 'modify' ) ) {
+			setTimeout(function() {
+				if ( jQuery(document).scrollTop() == 0 ) {
+					toggle(0);
+				}
+			}, 50);
+		}
+	});
+	var $toggle_anim_timeout;
 	function toggle( reveal ) {
 		isAnimating = true;
 		
@@ -491,7 +495,8 @@ function scrollPageToTop(){
 		}
 
 		// simulating the end of the transition:
-		setTimeout( function() {
+		clearInterval( $toggle_anim_timeout );
+		$toggle_anim_timeout = setTimeout( function() {
 			isRevealed = !isRevealed;
 			isAnimating = false;
 			if( reveal ) {
