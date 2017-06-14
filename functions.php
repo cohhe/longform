@@ -825,7 +825,7 @@ if (!function_exists('aesop_quote_shortcode')){
 					// ]]>
 				</script>
 
-				<?php do_action('aesop_quote_inside_top'); //action ?>
+				<?php do_action('aesop_quote_inside_top', $atts, $unique); //action ?>
 
 				<blockquote class="<?php echo sanitize_html_class( $align );?>" style="font-size:<?php echo esc_attr( $size);?>;">
 					<?php echo $atts['quote'];?>
